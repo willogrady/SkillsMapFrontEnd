@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS  `approvaldatabase`.`approve_employee_skill_assignment`;
+FLUSH TABLES  `approvaldatabase`.`approve_employee_skill_assignment` ; 
+CREATE TABLE `approvaldatabase`.`approve_employee_skill_assignment` (
+  `EndorsedID` INT NOT NULL,
+  `Status` VARCHAR(45) NOT NULL DEFAULT 'Draft',
+  `EndorsedDate` VARCHAR(45) NOT NULL,
+  `EmployeeNumber` VARCHAR(45) NULL,
+  `EndorsedBy` VARCHAR(45) NOT NULL,
+  `ApprovedDate` VARCHAR(45) NULL,
+  `PublishDate` VARCHAR(45) NULL,
+  `Reason` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`EndorsedID`));
+DROP TABLE IF EXISTS  `approvaldatabase`.`item_version_control`;
+FLUSH TABLES  `approvaldatabase`.`item_version_control` ; 
+CREATE TABLE `approvaldatabase`.`item_version_control` (
+  `VersionID` INT NOT NULL,
+  `Version` INT NOT NULL,
+  `Status` VARCHAR(45) NOT NULL,
+  `ChangeDate` DATE NOT NULL,
+  `EmployeeNumber` INT NOT NULL,
+  `ChangeBy` VARCHAR(30) NOT NULL,
+  `ApprovedBy` VARCHAR(30) NULL,
+  `ApprovedDate` DATE NULL,
+  `PublishDate` DATE NULL,
+  `Reason` VARCHAR(500) NOT NULL,
+  PRIMARY KEY (`VersionID`),
+  UNIQUE INDEX `VersionID_UNIQUE` (`VersionID` ASC));
