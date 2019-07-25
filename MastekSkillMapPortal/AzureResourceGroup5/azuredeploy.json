@@ -4,7 +4,6 @@
   "parameters": {
     "webAppName": {
       "type": "string",
-      "defaultValue": "SkillMap",
       "metadata": {
         "description": "Base name of the resource such as web app name and app service plan "
       },
@@ -33,7 +32,7 @@
     }
   },
   "variables": {
-    "webAppPortalName": "SkillMap",
+    "webAppPortalName": "[concat(parameters('webAppName'))]",
     "appServicePlanName": "spMSM"
   },
   "resources": [
