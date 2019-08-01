@@ -1,0 +1,24 @@
+<div class="container">
+    <h3>SFIA Skill List</h3>
+</div>
+
+<div class="container">
+<table class="table">
+    <tr>
+        <th>
+            Skill
+        </th>
+        <th>
+            Category
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    <tr *ngFor="let s of SfiaSkills; let i = index">
+        <td>{{s.skill_title}}</td>
+        <td>{{s.skill_category}}</td>
+        <td>{{s.skill_description}}</td>
+    </tr>
+</table>
+</div>
