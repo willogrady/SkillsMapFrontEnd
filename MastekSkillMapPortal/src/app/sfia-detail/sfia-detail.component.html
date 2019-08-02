@@ -1,0 +1,48 @@
+<div class="container">
+
+        <h2>{{sfiaSkill.skill_category}} - {{sfiaSkill.skill}} - {{sfiaSkill.skillcode}}</h2>
+
+        <div class = "container">
+        <h3>Skill Description</h3>
+            <p>{{sfiaSkill.skill_description}}</p>
+        </div>
+
+        <table class = "table">
+            <tr *ngIf="sfiaSkill.level1 != ''">
+                <td>Level 1</td>
+                <td>{{sfiaSkill.level1}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level2 != ''">
+                <td>Level 2</td>
+                <td>{{sfiaSkill.level2}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level3 != ''">
+                <td>Level 3</td>
+                <td>{{sfiaSkill.level3}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level4 != ''">
+                <td>Level 4</td>
+                <td>{{sfiaSkill.level4}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level5 != ''">
+                <td>Level 5</td>
+                <td>{{sfiaSkill.level5}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level6 != ''">
+                <td>Level 6</td>
+                <td>{{sfiaSkill.level6}}</td>
+            </tr>
+
+            <tr *ngIf="sfiaSkill.level7 != ''">
+                <td>Level 7</td>
+                <td>{{sfiaSkill.level7}}</td>
+            </tr>
+
+        </table>
+
+</div>
