@@ -3,12 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SfiaComponent } from './sfia/sfia.component';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
+import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
+import { RoleComponent } from './role/role.component';
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'sfia', component: SfiaComponent},
-  { path: 'sfia-skill/:id', component: SfiaDetailComponent}
+  { path: 'sfia-categories', component: SfiaCategoryComponent},
+  { path: 'sfia-skill/:id', component: SfiaDetailComponent},
+  { path: 'role', component: RoleComponent},
 ];
 
 @NgModule({
