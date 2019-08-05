@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core'
 import { SfiaSkill } from './sfia-skill'
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/common/http';
 import { Observable, Scheduler } from 'rxjs';
