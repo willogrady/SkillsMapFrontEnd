@@ -16,7 +16,7 @@
         </th>
     </tr>
     <tr *ngFor="let s of SfiaSkills; let i = index">
-        <td>{{s.skill_title}}</td>
+        <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
         <td>{{s.skill_category}}</td>
         <td>{{s.skill_description}}</td>
     </tr>

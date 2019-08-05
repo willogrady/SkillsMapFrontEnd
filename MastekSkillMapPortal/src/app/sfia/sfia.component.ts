@@ -17,7 +17,8 @@ export class SfiaComponent implements OnInit {
   ngOnInit() {
     this.sfiaService.getSkills().subscribe(
       res => {this.SfiaSkills = res; }
-    );
+      );
+      console.log(this.SfiaSkills[0].toString())
   }
 
 }
