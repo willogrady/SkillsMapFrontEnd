@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
 import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoleComponent } from './role/role.component';
     HomeComponent,
     SfiaDetailComponent,
     SfiaCategoryComponent,
-    RoleComponent
+    RoleComponent,
+    RoleDetailComponent
   ],
   imports: [
     BrowserModule,
