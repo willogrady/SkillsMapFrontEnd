@@ -10,6 +10,7 @@ import { SfiaSkill } from '../sfia-skill';
 export class SfiaCategoryComponent implements OnInit {
 
   categories: string[];
+  sfiaSkills: SfiaSkill[];
 
 
   constructor(private sfiaService: SfiaService) {
@@ -17,9 +18,9 @@ export class SfiaCategoryComponent implements OnInit {
    }
 
   getSkillByCategory(category: string): SfiaSkill[] {
-  this.sfiaService.getSkillByCategory(category).subscribe(
+    this.sfiaService.getSkillByCategory(category).subscribe(
       );
-      return ;
+    return;
   }
 
   ngOnInit() {
