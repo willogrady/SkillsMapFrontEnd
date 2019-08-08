@@ -7,13 +7,19 @@ import { SfiaComponent } from './sfia/sfia.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
+import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
+import { RoleComponent } from './role/role.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SfiaComponent,
     HomeComponent,
-    SfiaDetailComponent
+    SfiaDetailComponent,
+    SfiaCategoryComponent,
+    RoleComponent,
+    RoleDetailComponent
   ],
   imports: [
     BrowserModule,

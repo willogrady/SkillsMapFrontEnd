@@ -1,0 +1,13 @@
+<div class="container">
+    
+<table class="table" >
+    <tr>
+        <th>Role list</th>
+    </tr>
+    <tr *ngFor = "let r of roles; let i = index">
+        <td>
+            <a [routerLink]="['/role-detail', r.role_id]">{{r.role_title}}</a>
+        </td>
+    </tr>
+</table>
+</div>

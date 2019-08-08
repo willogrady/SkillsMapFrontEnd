@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sfia-detail.component.css']
 })
 export class SfiaDetailComponent implements OnInit {
-  sfiaSkill: SfiaSkill
+  sfiaSkill: SfiaSkill;
 
   constructor(private sfiaService:SfiaService, private route: ActivatedRoute) { 
     this.sfiaSkill = null;

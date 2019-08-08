@@ -1,0 +1,51 @@
+<div class="container" style="display: flex; justify-content: space-between">
+    <a href="sfia" class="active">List</a>
+    <a href="sfia-categories">Categories</a>
+    <a>Sub Categories</a>
+    <a>By Role</a>
+</div>
+
+<div class="container">
+    <h3>SFIA Skill Categories</h3>
+</div>
+
+<div class="container" id="accordion">
+  <div class="card" [attr.id]="'accordion_' + i" *ngFor="let c of categories; let i = index;">
+    <div class="card-header">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" [attr.data-parent]="'#accordion_' + i" [attr.href]="'#collapse_' + i" >
+        {{c}}
+        </a>
+      </h4>
+    </div>  
+      <div [attr.id]="'collapse_' + i" class="panel-collapse collapse">
+        <div class="card-body" ng-init="getSkillByCategory(c)">
+          <!-- <a *ngFor = "let s of sfiaSkills; let i = index" [routerLink]="['/sfia-skill', s.skill_id]"> -->
+            <a>
+              {{c}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- <div class="container">
+    <table class="table">
+        <tr *ngFor = "let c of categories; let i = index">
+            <td>
+                <button (click)="getSkillByCategory(c)" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    {{c}}
+                </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <a *ngFor = "let s of sfiaSkills; let i = index" [routerLink]="['/sfia-skill',s.skill_id]">
+                        {{s.skill}}
+                    </a>
+                </div>
+              </div>
+            </td>
+        </tr>
+    </table>
+</div> -->
