@@ -11,7 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class SfiaDetailComponent implements OnInit {
   sfiaSkill: SfiaSkill;
 
-  constructor(private sfiaService:SfiaService, private route: ActivatedRoute) { 
+  constructor(private sfiaService:SfiaService, 
+    private route: ActivatedRoute) { 
     this.sfiaSkill = null;
   }
 
