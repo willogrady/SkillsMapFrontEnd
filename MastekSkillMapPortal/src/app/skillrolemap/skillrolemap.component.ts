@@ -11,14 +11,24 @@ import { SfiaSkill } from '../sfia-skill';
 })
 export class SkillrolemapComponent implements OnInit {
   roleSkillMaps: RoleSkillMap[];
-  sfiaSkill: String
+  // sfiaSkill: SfiaSkill
+  
 
   constructor(private skill_role_map_Service:SkillrolemapService,
     private route: ActivatedRoute) {
     this.roleSkillMaps = [];
-    this.sfiaSkill = ""
-
+    // this.sfiaSkill = null
    }
+
+  //  getSkillInformation() {
+  //   const skillcode = this.route.snapshot.paramMap.get('skillcode');
+  //   this.skill_role_map_Service.getSfiaSkillviaId(skillcode)
+  //   .subscribe(response => {
+  //     this.sfiaSkill = response;
+  //     console.log(response)
+  //   })
+  //  }
+
   ngOnInit() {
     const skillcode = this.route.snapshot.paramMap.get('skillcode');
     this.skill_role_map_Service.getRoleSkillMapviaSkillCode(skillcode)
@@ -26,12 +36,7 @@ export class SkillrolemapComponent implements OnInit {
       this.roleSkillMaps = response;
       console.log(response);
       }
-    );
-    this.skill_role_map_Service.getSfiaSkillviaId('skillcode')
-    .subscribe(response => {
-      this.sfiaSkill = response;
-      console.log(response)
-    })
+    )
   }
 
 }
