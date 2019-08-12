@@ -15,7 +15,8 @@ export class SkillrolemapService {
    }
 
    getSkillviaSkillId(): Observable<RoleSkillMap> {
-     return this.httpsvc.get<RoleSkillMap>(this.rootURL + "/sfia_skill")
+     return this.httpsvc.get<RoleSkillMap>(this.rootURL +
+      "/sfia_skill")
    }
 
    getRoleviaSkill(skillcode: string): Observable<string[]> {

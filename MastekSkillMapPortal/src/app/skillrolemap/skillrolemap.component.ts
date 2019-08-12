@@ -10,18 +10,18 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./skillrolemap.component.css']
 })
 export class SkillrolemapComponent implements OnInit {
-  RoleSkillMap: string[];
+  RoleSkillMaps: string[];
 
   constructor(private skill_role_map_Service:SkillrolemapService,
     private route: ActivatedRoute) {
-    this.RoleSkillMap = null;
+    this.RoleSkillMaps = null;
    }
 
   ngOnInit() {
     this.skill_role_map_Service.getRoleviaSkill(this.route.snapshot.params.skillcode).subscribe(
-      res => {this.RoleSkillMap = res; }
+      res => {this.RoleSkillMaps = res; }
     );
-    console.log(this.RoleSkillMap[0].toString())
+    console.log(this.RoleSkillMaps[0])
   }
 
 }
