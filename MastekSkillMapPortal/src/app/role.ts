@@ -1,7 +1,6 @@
 import { RoleGroup } from './role-group';
 
 export interface Role {
-
     role_id: number;
     role_title: string;
     role_grade: string;
