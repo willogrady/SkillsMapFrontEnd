@@ -1,13 +1,12 @@
 <div class = "container">
-        <h2>{{sfiaSkill.skill_category}} - {{sfiaSkill.skill}} - {{sfiaSkill.skillcode}}</h2>
-        <div class = "container">
-                <h3>Skill Description</h3>
-                    <p>{{sfiaSkill.skill_description}}</p>
-        </div>
         <table class = "table">
-            <tr *ngFor = "let r of RoleSkillMap; let i = index">
+            <tr>
+                <td>Skill Code</td>
+                <td>{{SkillrolemapComponent.skillcode}}</td>
+            </tr>
+            <tr>
                 <td>Role</td>
-                <td>{{r.role}}</td>
+                <td>{{roleSkillMaps.role_id}}</td>
             </tr>
         </table>
     </div>
