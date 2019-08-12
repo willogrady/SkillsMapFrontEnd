@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RoleSkillMap } from '../role-skill-map';
 import { SkillrolemapService } from '../skillrolemap.service';
 import { ActivatedRoute } from '@angular/router';
+import { SfiaSkill } from '../sfia-skill';
 
 @Component({
   selector: 'app-skillrolemap',
@@ -10,10 +11,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SkillrolemapComponent implements OnInit {
   roleSkillMaps: RoleSkillMap[];
+  sfiaSkill: String
 
   constructor(private skill_role_map_Service:SkillrolemapService,
     private route: ActivatedRoute) {
     this.roleSkillMaps = [];
+    this.sfiaSkill = ""
 
    }
   ngOnInit() {
@@ -24,6 +27,11 @@ export class SkillrolemapComponent implements OnInit {
       console.log(response);
       }
     );
+    this.skill_role_map_Service.getSfiaSkillviaId('skillcode')
+    .subscribe(response => {
+      this.sfiaSkill = response;
+      console.log(response)
+    })
   }
 
 }

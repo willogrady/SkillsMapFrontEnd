@@ -2,11 +2,25 @@
         <table class = "table">
             <tr>
                 <td>Skill Code</td>
-                <td>{{SkillrolemapComponent.skillcode}}</td>
+                <td>{{roleSkillMaps.skillcode}}</td>
             </tr>
             <tr>
-                <td>Role</td>
-                <td>{{roleSkillMaps[1].role_id}}</td>
+                <td>Role Title</td>
+                <td>{{roleSkillMaps.role.role_title}}</td>
             </tr>
         </table>
     </div>
+
+    <br>
+    <h1>Assoicated Roles for Skillcode {{roleSkillMaps.skillcode}}</h1>
+<table class="table">
+  <tr>
+    <th>SkillCode</th>
+    <th>Role Title</th>
+    <th>Assoicated Skills</th>
+  </tr>
+  <tr *ngFor ="let em of employees; let i = index">
+    <td>{{em.empId}}</td>
+    <td>{{em.name}}</td>
+  </table>
+  </div>
