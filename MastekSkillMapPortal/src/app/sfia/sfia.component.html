@@ -40,11 +40,15 @@
         <th>
             Description
         </th>
+        <th>
+            View Associated Roles
+        </th>
     </tr>
     <tr *ngFor="let s of SfiaSkills; let i = index">
         <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
         <td>{{s.skill_category}}</td>
         <td>{{s.skill_description}}</td>
+        <td><a [routerLink]="['/role-skill-map',s.skillcode]">{{s.skillcode}}</a></td>
     </tr>
 </table>
 </div>
