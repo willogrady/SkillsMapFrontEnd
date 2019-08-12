@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core'
 import { SfiaSkill } from './sfia-skill'
 import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/common/http';
 import { Observable, Scheduler } from 'rxjs';
+import { MappingsContext } from 'source-list-map';
 
 
 @Injectable({
@@ -10,10 +11,15 @@ import { Observable, Scheduler } from 'rxjs';
 export class SfiaService {
 
   rootURL: string;
-
+  category: String[];
+  category1: string;
 
   constructor(private httpsvc: HttpClient) {
   this.rootURL = 'http://localhost:9900/sfia';
+  this.category1 = "Strategy and architecture";
+  this.category = ["Strategy and architecture", "Change and transformation", 
+  "Development and implementation", "Delivery and operation", "Skills and quality",
+  "Relationships and engagement"]
   }
 
   getSkills(): Observable<SfiaSkill[]> {
@@ -24,11 +30,24 @@ export class SfiaService {
     return this.httpsvc.get<SfiaSkill>(this.rootURL + '/id/' + id);
   }
 
+  //returns list of categories
   getCategories(): Observable<string[]> {
     return this.httpsvc.get<string[]>(this.rootURL + '/listcategory');
   }
 
-  getSkillByCategory(category: string): Observable<SfiaSkill[]> {
-    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + category);
+  getSkillByCategory(category: string[]): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category);
   }
+
+  //testing to see if it works
+  getSkillStrategy(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[0]);
+
+  }
+
+  getSkillChangeTransformation(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[1]);
+
+  }
+
 }
