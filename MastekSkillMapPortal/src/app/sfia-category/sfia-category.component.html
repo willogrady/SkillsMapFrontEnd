@@ -47,9 +47,6 @@
     </div>
   </div>
 
-  
-
-
 
 
 <br>
@@ -65,8 +62,8 @@
     <div class="card">
     <div class="card-header" id="item1Header">
          <h5 class="mb-0">
-           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable1" aria-expanded="false" aria-controls="expandable1">
-             Expandable Item 1
+           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable1" aria-expanded="false" aria-controls="expandable1" (click)="getSkillStrategy()">
+             Strategy and Architecture
            </button>
          </h5>
        </div>
@@ -99,8 +96,9 @@
      <div class="card">
        <div class="card-header" id="item2Header">
          <h5 class="mb-0">
-           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#expandable2" aria-expanded="true" aria-controls="expandable2">
-             Expandable Item 2
+           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#expandable2" aria-expanded="true" aria-controls="expandable2"
+           (click)="getSkillChange()">
+             Change and Transformation
            </button>
          </h5>
        </div>
@@ -148,3 +146,28 @@
 
 
 </div> <!--end of container-->
+
+<button (click)="getSkillStrategy()" class="btn btn-primary">Strategy</button>
+<button (click)="getSkillChange()" class="btn btn-primary">Change</button>
+
+<div class="container">
+  <h3>Change</h3>
+    <table class="table">
+        <tr>
+            <th>
+                Skill
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+        <tr *ngFor="let s of sfiaSkills; let i = index">
+            <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
+            <td>{{s.skill_category}}</td>
+            <td>{{s.skill_description}}</td>
+        </tr>
+    </table>
+    </div>
