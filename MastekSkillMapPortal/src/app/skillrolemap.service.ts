@@ -15,8 +15,8 @@ export class SkillrolemapService {
     this.rootURL = "http://localhost:9901/role_skill_map";
    }
 
-   getSfiaSkillviaId(skillcode: string): Observable<String> {
-     return this.httpsvc.get<String>(this.rootURL +
+   getSfiaSkillviaId(skillcode: string): Observable<SfiaSkill> {
+     return this.httpsvc.get<SfiaSkill>(this.rootURL +
     "/sfia_skill?skillcode" + skillcode);
    }
 

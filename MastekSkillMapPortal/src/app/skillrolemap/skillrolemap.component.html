@@ -1,26 +1,19 @@
 <div class = "container">
-        <table class = "table">
-            <tr>
-                <td>Skill Code</td>
-                <td>{{roleSkillMaps.skillcode}}</td>
-            </tr>
-            <tr>
-                <td>Role Title</td>
-                <td>{{roleSkillMaps.role.role_title}}</td>
-            </tr>
-        </table>
-    </div>
+      <table class="table">
+           <tr>
+            <th>SkillCode</th>
+            <th>Role Title</th>
+            <th>Skill Level Required</th>
+            <th>Role Group</th>
+            <th>Summary</th>
+           </tr>
+             <tr *ngFor ="let role of roleSkillMaps; let i = index">
+             <td>{{role.skillcode}}</td>
+             <td>{{role.role.role_title}}</td>
+             <td>{{role.level}}</td>
+             <td>{{role.role.roleGroup.role_group}}</td>
+             <td>{{role.role.role_summary}}</td>
 
-    <br>
-    <h1>Assoicated Roles for Skillcode {{roleSkillMaps.skillcode}}</h1>
-<table class="table">
-  <tr>
-    <th>SkillCode</th>
-    <th>Role Title</th>
-    <th>Assoicated Skills</th>
-  </tr>
-  <tr *ngFor ="let em of employees; let i = index">
-    <td>{{em.empId}}</td>
-    <td>{{em.name}}</td>
-  </table>
-  </div>
+     </table>
+    </div>
+     
