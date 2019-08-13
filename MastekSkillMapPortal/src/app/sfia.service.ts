@@ -64,4 +64,5 @@ export class SfiaService {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[5]);
   }
 
+  
 }
