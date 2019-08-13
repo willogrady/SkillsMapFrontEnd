@@ -1,11 +1,12 @@
-import { Role } from './role';
+import { RoleGroup } from './role-group';
 
 export interface RoleSkillMap {
-    role_skill_map_id: number;
     role_id: number;
-    role_title:string;
-    skillcode: string;
-    level: number;
+    role_title: string;
+    role_grade: string;
     version_id: number;
-    role: Role
+    role_summary: string;
+    role_group_id: number;
+    role_group: RoleGroup;
+    Skills: String[];
 }

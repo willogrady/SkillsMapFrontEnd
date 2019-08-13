@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Role } from '../role';
 import { RoleService } from '../role.service';
+import { SkillrolemapService } from '../skillrolemap.service';
+import { RoleSkillMap } from '../role-skill-map';
 
 @Component({
   selector: 'app-role',
@@ -10,9 +12,18 @@ import { RoleService } from '../role.service';
 export class RoleComponent implements OnInit {
 
   roles: Role[];
+  roleSkillMap: RoleSkillMap[];
 
-  constructor(private roleService: RoleService) {
+  constructor(private roleService: RoleService, private skillRoleMapService: SkillrolemapService) {
     this.roles = [];
+   }
+
+
+   //getSkillMap
+   getSkillByRole(role_id: number){
+    this.skillRoleMapService.getSkillByRole(role_id).subscribe(
+      res => {this.roleSkillMap = res}
+    )
    }
   
   getRoleArchitecture() {
