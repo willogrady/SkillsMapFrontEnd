@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Role } from '../role';
 import { RoleService } from '../role.service';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
-
 
 @Component({
   selector: 'app-role',
@@ -12,17 +10,49 @@ import { ActivatedRoute } from '../../../node_modules/@angular/router';
 export class RoleComponent implements OnInit {
 
   roles: Role[];
-  role_group_id: number
 
-  constructor(private roleService: RoleService,
-    private route: ActivatedRoute) {
+  constructor(private roleService: RoleService) {
     this.roles = [];
-    this.role_group_id = 0
- 
    }
   
   getRoleArchitecture() {
     this.roleService.getRoleArchitecture().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getBusinessAnalysis() {
+    this.roleService.getRoleBusinessAnalysis().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getConsulting() {
+    this.roleService.getConsulting().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getDeliveryManagement() {
+    this.roleService.getDeliveryManagement().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getEngineering() {
+    this.roleService.getEngineering().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getFinance() {
+    this.roleService.getFinance().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getHumanResources() {
+    this.roleService.getHumanResources().subscribe(
       res => {this.roles = res }
     )
   }
