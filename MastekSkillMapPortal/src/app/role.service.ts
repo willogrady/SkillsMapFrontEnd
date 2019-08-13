@@ -22,4 +22,33 @@ export class RoleService {
    getRoleById(id: number): Observable<Role> {
      return this.httpsvc.get<Role>(this.rootURL + '/id/' + id);
    }
+
+   getRoleArchitecture(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/1')
+  }
+
+  getRoleBusinessAnalysis(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/2')
+  }
+
+  getConsulting(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/3')
+  }
+
+  getDeliveryManagement(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/4')
+  }
+
+  getEngineering(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/5')
+  }
+
+  getFinance(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/6')
+  }
+
+  getHumanResources(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/7')
+  }
+
 }

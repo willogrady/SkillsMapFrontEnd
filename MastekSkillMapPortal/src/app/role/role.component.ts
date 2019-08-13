@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Role } from '../role';
 import { RoleService } from '../role.service';
 
-
 @Component({
   selector: 'app-role',
   templateUrl: './role.component.html',
@@ -15,11 +14,50 @@ export class RoleComponent implements OnInit {
   constructor(private roleService: RoleService) {
     this.roles = [];
    }
+  
+  getRoleArchitecture() {
+    this.roleService.getRoleArchitecture().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getBusinessAnalysis() {
+    this.roleService.getRoleBusinessAnalysis().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getConsulting() {
+    this.roleService.getConsulting().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getDeliveryManagement() {
+    this.roleService.getDeliveryManagement().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getEngineering() {
+    this.roleService.getEngineering().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getFinance() {
+    this.roleService.getFinance().subscribe(
+      res => {this.roles = res }
+    )
+  }
+
+  getHumanResources() {
+    this.roleService.getHumanResources().subscribe(
+      res => {this.roles = res }
+    )
+  }
 
   ngOnInit() {
-    this.roleService.getRoles().subscribe(
-      res => { this.roles = res; }
-    );
     }
   }
 

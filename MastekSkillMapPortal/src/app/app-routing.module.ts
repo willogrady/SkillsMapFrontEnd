@@ -7,6 +7,7 @@ import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
+import { RoleGroupComponent } from './role-group/role-group.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'role-skill-map/:skillcode', component: SkillrolemapComponent},
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
+  { path: 'role-group', component: RoleGroupComponent},
   { path: 'role', component: RoleComponent},
   { path: 'role-detail/:id', component: RoleDetailComponent},
 ];
