@@ -86,56 +86,132 @@
      <div class="card">
        <div class="card-header" id="item3Header">
          <h5 class="mb-0">
-           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable3" aria-expanded="false" aria-controls="expandable3">
+           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable3" aria-expanded="false" aria-controls="expandable3" (click)="getSkillDevelopment()">
               Development and Implementation
            </button>
          </h5>
        </div>
        <div id="expandable3" class="collapse" aria-labelledby="item3Header" data-parent="#myAccordion">
          <div class="card-body">
-             TODO:
+            <div class="container">
+                <table class="table">
+                    <tr>
+                        <th>
+                            Skill
+                        </th>
+                        <th>
+                            Category
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                    </tr>
+                    <tr *ngFor="let s of sfiaSkills; let i = index">
+                        <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
+                        <td>{{s.skill_category}}</td>
+                        <td>{{s.skill_description}}</td>
+                    </tr>
+                </table>
+                </div>
          </div>
        </div>
 
        <div class="card">
           <div class="card-header" id="item4Header">
             <h5 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable4" aria-expanded="false" aria-controls="expandable4">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable4" aria-expanded="false" aria-controls="expandable4" (click)="getSkillDelivery()">
                  Delivery and Operation
               </button>
             </h5>
           </div>
           <div id="expandable4" class="collapse" aria-labelledby="item4Header" data-parent="#myAccordion">
             <div class="card-body">
-                TODO:
+                <div class="container">
+                    <table class="table">
+                        <tr>
+                            <th>
+                                Skill
+                            </th>
+                            <th>
+                                Category
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                        </tr>
+                        <tr *ngFor="let s of sfiaSkills; let i = index">
+                            <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
+                            <td>{{s.skill_category}}</td>
+                            <td>{{s.skill_description}}</td>
+                        </tr>
+                    </table>
+                    </div>
             </div>
           </div>
 
           <div class="card">
               <div class="card-header" id="item5Header">
                 <h5 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable5" aria-expanded="false" aria-controls="expandable5">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable5" aria-expanded="false" aria-controls="expandable5" (click)="getSkillQuality()">
                      Skills and Quality
                   </button>
                 </h5>
               </div>
               <div id="expandable5" class="collapse" aria-labelledby="item5Header" data-parent="#myAccordion">
                 <div class="card-body">
-                    deilver
+                    <div class="container">
+                        <table class="table">
+                            <tr>
+                                <th>
+                                    Skill
+                                </th>
+                                <th>
+                                    Category
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                            </tr>
+                            <tr *ngFor="let s of sfiaSkills; let i = index">
+                                <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
+                                <td>{{s.skill_category}}</td>
+                                <td>{{s.skill_description}}</td>
+                            </tr>
+                        </table>
+                        </div>
                 </div>
               </div>
 
               <div class="card">
                   <div class="card-header" id="item6Header">
                     <h5 class="mb-0">
-                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable6" aria-expanded="false" aria-controls="expandable6">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable6" aria-expanded="false" aria-controls="expandable6" (click)="getSkillRelationship()">
                          Relationships and Engagement
-                      </button>
+                        </button>
                     </h5>
                   </div>
                   <div id="expandable6" class="collapse" aria-labelledby="item6Header" data-parent="#myAccordion">
                     <div class="card-body">
-                        TODO:
+                        <div class="container">
+                            <table class="table">
+                                <tr>
+                                    <th>
+                                        Skill
+                                    </th>
+                                    <th>
+                                        Category
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                </tr>
+                                <tr *ngFor="let s of sfiaSkills; let i = index">
+                                    <td><a [routerLink]="['/sfia-skill',s.skill_id]">{{s.skill}}</a></td>
+                                    <td>{{s.skill_category}}</td>
+                                    <td>{{s.skill_description}}</td>
+                                </tr>
+                            </table>
+                            </div>
                     </div>
                   </div>
 
