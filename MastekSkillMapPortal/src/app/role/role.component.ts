@@ -22,7 +22,6 @@ export class RoleComponent implements OnInit {
    }
   
   getRoleArchitecture() {
-    //display only Architecture
     this.roleService.getRoleArchitecture().subscribe(
       res => {this.roles = res }
     )
