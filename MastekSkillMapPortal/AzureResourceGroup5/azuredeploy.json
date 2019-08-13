@@ -16,7 +16,7 @@
         "description": "The SKU of App Service Plan "
       }
     },
-    "linuxFxVersion" : {
+    "windowsFxVersion" : {
         "type": "string",
         "defaultValue" : ".net core|2.2",
         "metadata": {
@@ -33,13 +33,13 @@
   },
   "variables": {
     "webAppPortalName": "[concat(parameters('webAppName'))]",
-    "appServicePlanName": "spMSM"
+    "appServicePlanName": "spSM"
   },
   "resources": [
     {
       "type": "Microsoft.Web/serverfarms",
       "apiVersion": "2017-08-01",
-      "kind": "linux",
+      "kind": "windows",
       "name": "[variables('appServicePlanName')]",
       "location": "[parameters('location')]",
       "dependsOn": [],
@@ -47,7 +47,7 @@
         "name": "[parameters('sku')]"
       },
       "properties":{
-        "reserved":true
+        "reserved":false
       }
     },
     {
@@ -59,7 +59,7 @@
       "properties": {
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('appServicePlanName'))]",
         "siteConfig": {
-            "linuxFxVersion": "[parameters('linuxFxVersion')]"
+            "windowsFxVersion": "[parameters('windowsFxVersion')]"
           }
       },
       "dependsOn": [
