@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgxPaginationModule} from 'ngx-pagination';  
+import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
+import {FormsModule} from "@angular/forms"; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +15,7 @@ import { RoleComponent } from './role/role.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleGroupComponent } from './role-group/role-group.component';
+import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,16 @@ import { RoleGroupComponent } from './role-group/role-group.component';
     RoleComponent,
     RoleDetailComponent,
     SkillrolemapComponent,
-    RoleGroupComponent
+    RoleGroupComponent,
+    RoleBySkillComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

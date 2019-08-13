@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Role } from '../role';
 import { RoleService } from '../role.service';
+import { SfiaSkill } from '../sfia-skill';
 
 @Component({
   selector: 'app-role',

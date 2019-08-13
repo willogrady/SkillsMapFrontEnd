@@ -30,7 +30,6 @@ export class SfiaService {
     return this.httpsvc.get<SfiaSkill>(this.rootURL + '/id/' + id);
   }
 
-  //returns list of categories
   getCategories(): Observable<string[]> {
     return this.httpsvc.get<string[]>(this.rootURL + '/listcategory');
   }
@@ -39,7 +38,6 @@ export class SfiaService {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category);
   }
 
-  //testing to see if it works
   getSkillStrategy(): Observable<SfiaSkill[]> {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[0]);
   }

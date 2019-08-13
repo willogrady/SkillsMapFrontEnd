@@ -15,13 +15,14 @@ export class SkillrolemapService {
     this.rootURL = "http://localhost:9901/role_skill_map";
    }
 
-  //  getSfiaSkillviaId(skillcode: string): Observable<SfiaSkill> {
-  //    return this.httpsvc.get<SfiaSkill>(this.rootURL +
-  //   "/sfia_skill?skillcode" + skillcode);
-  //  }
-
-   getRoleSkillMapviaSkillCode(skillcode: string): Observable<RoleSkillMap[]> {
-     return this.httpsvc.get<RoleSkillMap[]>(this.rootURL +
+  getRoleSkillMapviaSkillCode(skillcode: string): Observable<RoleSkillMap[]> {
+    return this.httpsvc.get<RoleSkillMap[]>(this.rootURL +
     "/skillcode?skillcode=" + skillcode);
-   }
+  }
+  
+  getSkillsViaRole(role_id: string): Observable<RoleSkillMap[]> {
+    return this.httpsvc.get<RoleSkillMap[]>(this.rootURL +
+      "/skill_by_role?role_id=" + role_id);  
+  }
+  
 }

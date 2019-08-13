@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { RoleSkillMap } from '../role-skill-map';
 import { SkillrolemapService } from '../skillrolemap.service';
 import { ActivatedRoute } from '@angular/router';
-import { SfiaSkill } from '../sfia-skill';
+
+// THIS IS SKILL TO ROLES
 
 @Component({
   selector: 'app-skillrolemap',
