@@ -42,12 +42,26 @@ export class SfiaService {
   //testing to see if it works
   getSkillStrategy(): Observable<SfiaSkill[]> {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[0]);
-
   }
 
   getSkillChangeTransformation(): Observable<SfiaSkill[]> {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[1]);
+  }
 
+  getSkillDevelopment(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[2]);
+  }
+
+  getSkillDelivery(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[3]);
+  }
+
+  getSkillQuality(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[4]);
+  }
+
+  getSkillRelationShip(): Observable<SfiaSkill[]> {
+    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[5]);
   }
 
 }
