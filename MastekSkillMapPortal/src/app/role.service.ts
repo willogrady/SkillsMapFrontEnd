@@ -15,15 +15,15 @@ export class RoleService {
     this.rootURL = 'http://localhost:9901/role';
    }
 
-   getRoles(): Observable<Role[]> {
+  getRoles(): Observable<Role[]> {
      return this.httpsvc.get<Role[]>(this.rootURL + '/list');
    }
 
-   getRoleById(id: number): Observable<Role> {
+  getRoleById(id: number): Observable<Role> {
      return this.httpsvc.get<Role>(this.rootURL + '/id/' + id);
    }
 
-   getRoleArchitecture(): Observable<Role[]> {
+  getRoleArchitecture(): Observable<Role[]> {
     return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/1')
   }
 
