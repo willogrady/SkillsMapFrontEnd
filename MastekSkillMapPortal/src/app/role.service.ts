@@ -22,4 +22,8 @@ export class RoleService {
    getRoleById(id: number): Observable<Role> {
      return this.httpsvc.get<Role>(this.rootURL + '/id/' + id);
    }
+
+   getRoleArchitecture(): Observable<Role[]> {
+    return this.httpsvc.get<Role[]>(this.rootURL +'/role_group/1')
+  }
 }

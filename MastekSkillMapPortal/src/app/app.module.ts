@@ -11,6 +11,7 @@ import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
+import { RoleGroupComponent } from './role-group/role-group.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
     SfiaCategoryComponent,
     RoleComponent,
     RoleDetailComponent,
-    SkillrolemapComponent
+    SkillrolemapComponent,
+    RoleGroupComponent
   ],
   imports: [
     BrowserModule,

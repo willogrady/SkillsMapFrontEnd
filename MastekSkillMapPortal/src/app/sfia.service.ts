@@ -41,7 +41,8 @@ export class SfiaService {
 
   //testing to see if it works
   getSkillStrategy(): Observable<SfiaSkill[]> {
-    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/category/' + this.category[0]);
+    return this.httpsvc.get<SfiaSkill[]>(
+      this.rootURL + '/category/' + this.category[0]);
 
   }
 

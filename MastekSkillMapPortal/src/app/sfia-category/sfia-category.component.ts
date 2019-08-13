@@ -17,39 +17,28 @@ export class SfiaCategoryComponent implements OnInit {
 
    }
 
-  getSkillByCategory(category: string[]): SfiaSkill[] {
-    console.log("making a request")
-    this.sfiaService.getSkillByCategory(category).subscribe(
-     res =>{this.sfiaSkills = res; }
-      );
-    console.log("categories:" + this.category[4])
-    return;
-  }
-
-  getSkillTesting(){
+  getSkillChange(){
     this.sfiaService.getSkillChangeTransformation().subscribe(
+      res => {this.sfiaSkills = res }
+      )
+  }
+  
+  getSkillStrategy() {
+     //display only strategy 
+     this.sfiaService.getSkillStrategy().subscribe(
       res => {this.sfiaSkills = res; }
       );
   }
-
 
   ngOnInit() {
     this.sfiaService.getCategories().subscribe(
       res => {this.category = res; }
-    );
-    console.log('categories:' + this.category);
-
-    //display only strategy 
-    this.sfiaService.getSkillStrategy().subscribe(
-      res => {this.sfiaSkills = res; }
-      );
-      console.log(this.sfiaSkills[0].toString())
-
-      this.sfiaService.getSkillChangeTransformation().subscribe(
-        res => {this.sfiaSkills = res; }
-        );
-        console.log(this.sfiaSkills[0].toString())
-
+    )
+    // //display only strategy 
+    // this.sfiaService.getSkillStrategy().subscribe(
+    //   res => {this.sfiaSkills = res; }
+    //   );
+    //   console.log(this.sfiaSkills.toString())
 
   
 

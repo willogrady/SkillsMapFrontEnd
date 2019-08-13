@@ -1,4 +1,51 @@
+<br>
+<div class="container" style="display: flex; justify-content: space-between">
+    <a class="active">Role Groups</a>
+    <a href="role">List Roles</a>
+</div>
 <div class="container">
+        <h3>Role Groups</h3>
+</div>
+<br>
+<div class="accordion" id="myAccordion">
+    <div class="card">
+    <div class="card-header" id="item1Header">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#expandable1" aria-expanded="false" aria-controls="expandable1" (click)="getRoleArchitecture()">
+                    Architecture
+                </button>
+            </h5>
+    </div>
+    <div id="expandable1" class="collapse" aria-labelledby="item1Header" data-parent="#myAccordion">
+            <div class="card-body">
+               <div class="container">
+                   <table class="table">
+                       <tr>
+                           <th>
+                               Role
+                           </th>
+                           <th>
+                               Role Grade
+                           </th>
+                           <th>
+                               Role Summary
+                           </th>
+                       </tr>
+                       <tr *ngFor="let r of roles; let i = index">
+                           <td>{{r.role_title}}</td>
+                           <td>{{r.role_grade}}</td>
+                           <td>{{r.role_summary}}</td>
+                       </tr>
+                   </table>
+                   </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+<!-- <div class="container">
     
 <table class="table" >
     <tr>
@@ -10,4 +57,4 @@
         </td>
     </tr>
 </table>
-</div>
+</div> -->

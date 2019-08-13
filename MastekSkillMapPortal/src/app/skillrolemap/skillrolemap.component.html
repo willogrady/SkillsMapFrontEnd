@@ -1,50 +1,18 @@
 <div class = "container">
-        <table class = "table">
-            <!-- <tr>
-                <td>Skill Code</td>
-                <td>{{roleSkillMaps[0].skillcode}}</td>
-            </tr> -->
-            <tr>
-                <td>Role</td>
-                <td>{{roleSkillMaps[0].role.role_title}}</td>
-            </tr>
-            <tr>
-                <td>Role Grade</td>
-                <td>{{roleSkillMaps[0].role.role_garde}}</td>
-            </tr>
-            <tr>
-                <td>Role Summary</td>
-                <td>{{roleSkillMaps[0].role.role_summary}}</td>
-            </tr>
-            <tr>
-                <td>Role Group</td>
-                <td>{{roleSkillMaps[0].role.roleGroup.role_group}}</td>
-                </tr>
-            <tr>
-                <td>Skill Level Required</td>
-                <td>{{roleSkillMaps[0].level}}</td>
-            </tr>
+      <table class="table">
+           <tr>
+            <th>SkillCode</th>
+            <th>Role Title</th>
+            <th>Skill Level Required</th>
+            <th>Role Group</th>
+            <th>Summary</th>
+           </tr>
+             <tr *ngFor ="let role of roleSkillMaps; let i = index">
+             <td>{{role.skillcode}}</td>
+             <td>{{role.role.role_title}}</td>
+             <td>{{role.level}}</td>
+             <td>{{role.role.roleGroup.role_group}}</td>
+             <td>{{role.role.role_summary}}</td>
 
-        <br>
-            <tr>
-                <td>Role</td>
-                <td>{{roleSkillMaps[1].role.role_title}}</td>
-            </tr>
-            <tr>
-                <td>Role Grade</td>
-                <td>{{roleSkillMaps[1].role.role_garde}}</td>
-            </tr>
-            <tr>
-                <td>Role Summary</td>
-                <td>{{roleSkillMaps[1].role.role_summary}}</td>
-            </tr>
-            <tr>
-                <td>Role Group</td>
-                <td>{{roleSkillMaps[1].role.roleGroup.role_group}}</td>
-            </tr>
-            <tr>
-                <td>Skill Level Required</td>
-                <td>{{roleSkillMaps[1].level}}</td>
-            </tr>
-        </table>
-    </div>
+     </table>
+</div>
