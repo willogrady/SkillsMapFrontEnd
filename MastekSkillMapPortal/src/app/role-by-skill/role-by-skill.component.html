@@ -1,4 +1,4 @@
-<div class = "container">
+<!-- <div class = "container">
     <div class="container">
         <div class="accordion" id="myAccordion">
             <div class="card">
@@ -8,18 +8,22 @@
                             data-target="#expandable1" aria-expanded="false" aria-controls="expandable1"
                             (click)="getSkill(r.skillcode)">
                                     {{r.skillcode}}
-                                </button>
-                            </h5>
+                        </button>
+                    </h5>
+                </div>
+            </div>
+        </div>
     </div>
-        <!-- <table class="table">
-             <tr>
-              <th>Skill Code</th>
-              <td>Skill</td>
-            </tr>
-            <tr *ngFor ="let r of roleSkillMaps; let i = index">
-                    <td><a [routerLink]="['/sfia-skill',r.skillcode]">{{r.skillcode}}</a></td>
-                    <td ></td>
-            </tr>
-       </table> -->
-  </div>
+</div> -->
 
+
+   <table class="table">
+        <tr>
+            <th>Skill Code</th>
+            <th>Skill</th>
+        </tr>
+        <tr *ngFor ="let r of roleSkillMaps; let i = index">
+            <td><a [routerLink]="['/sfia-skill',r.skillcode]">{{r.skillcode}}</a></td>
+            <td ></td>
+        </tr>
+    </table>
