@@ -12,9 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
 import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
-import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
-import { RoleGroupComponent } from './role-group/role-group.component';
 import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 
 @NgModule({
@@ -25,9 +23,7 @@ import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
     SfiaDetailComponent,
     SfiaCategoryComponent,
     RoleComponent,
-    RoleDetailComponent,
     SkillrolemapComponent,
-    RoleGroupComponent,
     RoleBySkillComponent
   ],
   imports: [
