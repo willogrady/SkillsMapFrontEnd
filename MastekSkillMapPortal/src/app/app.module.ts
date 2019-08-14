@@ -15,6 +15,7 @@ import { RoleComponent } from './role/role.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleGroupComponent } from './role-group/role-group.component';
+import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RoleGroupComponent } from './role-group/role-group.component';
     RoleComponent,
     RoleDetailComponent,
     SkillrolemapComponent,
-    RoleGroupComponent
+    RoleGroupComponent,
+    RoleBySkillComponent
   ],
   imports: [
     BrowserModule,

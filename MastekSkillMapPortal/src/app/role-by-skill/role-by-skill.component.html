@@ -1,0 +1,17 @@
+<div class = "container">
+        <table class="table">
+             <tr>
+              <th>Role Title</th>
+              <th>Skill</th>
+              <th>Describtion</th>
+              <th>Skill Level Required</th>
+             </tr>
+               <tr *ngFor ="let role of roleSkillMaps; let i = index">
+               <td>{{role.role_title}}</td>
+               <td>{{role.level}}</td>
+               <td>{{role.role.role_grade}}</td>
+               <td>{{role.role.roleGroup.role_group}}</td>
+               <td>{{role.role.role_summary}}</td>
+       </table>
+  </div>
+

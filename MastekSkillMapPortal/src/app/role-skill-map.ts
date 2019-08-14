@@ -1,12 +1,12 @@
-import { RoleGroup } from './role-group';
-
+import { Role } from './role';
+import { SfiaSkill } from './sfia-skill';
 export interface RoleSkillMap {
+    role_skill_map_id: number;
     role_id: number;
     role_title: string;
-    role_grade: string;
+    skillcode: string;
+    level: number;
     version_id: number;
-    role_summary: string;
-    role_group_id: number;
-    role_group: RoleGroup;
-    Skills: String[];
+    roleGroup: Role;
+    sfiaSkill: JSON["stringify"];
 }

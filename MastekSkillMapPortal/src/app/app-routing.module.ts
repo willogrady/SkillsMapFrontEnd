@@ -8,6 +8,7 @@ import { RoleComponent } from './role/role.component';
 import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleGroupComponent } from './role-group/role-group.component';
+import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
   { path: 'role-group', component: RoleGroupComponent},
   { path: 'role', component: RoleComponent},
-  { path: 'role-detail/:id', component: RoleDetailComponent},
+  { path: 'role-detail/:id', component: RoleDetailComponent },
+  { path: 'role-by-skill', component: RoleBySkillComponent },
+  { path: 'role-by-skill/:role_id', component: RoleBySkillComponent }
 ];
 
 @NgModule({
