@@ -9,7 +9,7 @@ import { SfiaSkill } from '../sfia-skill';
   styleUrls: ['./role.component.css']
 })
 export class RoleComponent implements OnInit {
-
+  
   roles: Role[];
  
 
