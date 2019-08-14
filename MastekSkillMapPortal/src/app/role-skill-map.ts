@@ -8,5 +8,5 @@ export interface RoleSkillMap {
     level: number;
     version_id: number;
     roleGroup: Role;
-    sfiaSkill: JSON["stringify"];
+    sfiaSkill: SfiaSkill[];
 }
