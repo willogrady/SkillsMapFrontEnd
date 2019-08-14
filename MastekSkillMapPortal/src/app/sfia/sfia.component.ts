@@ -23,7 +23,7 @@ export class SfiaComponent implements OnInit {
     this.sfiaService.getSkills().subscribe(
       res => {this.SfiaSkills = res; }
       );
-      console.log(this.SfiaSkills.toString());
+      console.log(this.SfiaSkills);
   }
 
 }

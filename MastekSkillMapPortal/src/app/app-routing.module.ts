@@ -7,6 +7,7 @@ import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
+import { CreateRoleComponent } from './create-role/create-role.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
   { path: 'role', component: RoleComponent},
   { path: 'role-by-skill', component: RoleBySkillComponent },
-  { path: 'role-by-skill/:role_id', component: RoleBySkillComponent }
+  { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
+  { path: 'create-role', component: CreateRoleComponent}
 ];
 
 @NgModule({

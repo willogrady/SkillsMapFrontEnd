@@ -4,7 +4,6 @@ import { SkillrolemapService } from '../skillrolemap.service';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
 import { SfiaSkill } from '../sfia-skill';
 import { SfiaService } from '../sfia.service';
-
 @Component({
   selector: 'app-role-by-skill',
   templateUrl: './role-by-skill.component.html',
@@ -14,9 +13,7 @@ export class RoleBySkillComponent implements OnInit {
   roleSkillMaps: RoleSkillMap[];
   sfiaSkill: SfiaSkill;
   skillcode: string;
-
   // THIS IS SKILLS TO ROLES THROUGH ROLE HTML
-
   constructor(private skill_role_map_Service: SkillrolemapService,
     private sfia_skill_Service: SfiaService,
     private route: ActivatedRoute) {
@@ -24,7 +21,6 @@ export class RoleBySkillComponent implements OnInit {
     this.sfiaSkill = null;
     this.skillcode = ""
   }
-
   getSkill() {
     this.sfia_skill_Service.getSkill(this.skillcode).subscribe(
       res => {this.sfiaSkill = res }
@@ -39,5 +35,4 @@ export class RoleBySkillComponent implements OnInit {
         console.log(response)
       })
   }
-
 }

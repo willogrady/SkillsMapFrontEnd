@@ -11,11 +11,14 @@ import { SfiaSkill } from '../sfia-skill';
 export class RoleComponent implements OnInit {
   
   roles: Role[];
+ 
 
   constructor(private roleService: RoleService) {
     this.roles = [];
    }
-  
+
+
+ 
   getRoleArchitecture() {
     this.roleService.getRoleArchitecture().subscribe(
       res => {this.roles = res }

@@ -8,6 +8,7 @@ export interface RoleSkillMap {
     skillcode: string;
     level: number;
     version_id: number;
+    roleGroup: Role;
     role: Role;
     skill: SfiaSkill
 }

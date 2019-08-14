@@ -15,6 +15,28 @@ export class RoleService {
     this.rootURL = 'http://localhost:9901/role';
    }
 
+
+  createRole(role_title: string, role_grade: string,
+             role_summary: string, role_group_id: string): Observable<Role[]> {
+
+    let reqBody = new URLSearchParams();
+    reqBody.set('role_title', role_title)
+    reqBody.set('role_grade', role_grade)
+    reqBody.set('version_id', '1')
+    reqBody.set('role_summary', role_summary)
+    reqBody.set('role_group_id', role_group_id)
+
+    const httpOpts = {
+      headers: new HttpHeaders(
+        {'Content-Type':
+        'application/x-www-form-urlencoded;charset=UTF-8'
+        })
+      }
+
+    return this.httpsvc.post<Role[]>(this.rootURL + '/create',  reqBody.toString(), httpOpts);
+    
+  }
+
   getRoles(): Observable<Role[]> {
      return this.httpsvc.get<Role[]>(this.rootURL + '/list');
    }
