@@ -3,7 +3,7 @@ import { RoleSkillMap } from '../role-skill-map';
 import { SkillrolemapService } from '../skillrolemap.service';
 import { ActivatedRoute } from '@angular/router';
 
-// THIS IS SKILL TO ROLES
+// THIS IS ROLES TO SKILL FROM SFIA HTML
 
 @Component({
   selector: 'app-skillrolemap',

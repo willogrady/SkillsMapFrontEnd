@@ -26,8 +26,8 @@ export class SfiaService {
     return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/list');
   }
 
-  getSkill(id: number): Observable<SfiaSkill[]> {
-    return this.httpsvc.get<SfiaSkill[]>(this.rootURL + '/id/' + id);
+  getSkill(skillcode: string): Observable<SfiaSkill> {
+    return this.httpsvc.get<SfiaSkill>(this.rootURL + '/skillcode/' + skillcode);
   }
 
   getCategories(): Observable<string[]> {

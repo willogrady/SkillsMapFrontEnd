@@ -1,16 +1,25 @@
 <div class = "container">
-        <table class="table">
+    <div class="container">
+        <div class="accordion" id="myAccordion">
+            <div class="card">
+                <div *ngFor = "let r of roleSkillMaps; let i = index" class="card-header" id="item1Header">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                            data-target="#expandable1" aria-expanded="false" aria-controls="expandable1"
+                            (click)="getSkill(skillcode(1))">
+                                    {{r.skillcode}}
+                                </button>
+                            </h5>
+    </div>
+        <!-- <table class="table">
              <tr>
               <th>Skill Code</th>
-              <th>Skill Description</th>
+              <td>Skill</td>
             </tr>
             <tr *ngFor ="let r of roleSkillMaps; let i = index">
-                <td>{{r.skillcode}}</td>
+                    <td><a [routerLink]="['/sfia-skill',r.skillcode]">{{r.skillcode}}</a></td>
+                    <td ></td>
             </tr>
-            <tr>
-               <td>{{sfiaSkill.skill_description}}</td>
-            </tr>
-
-       </table>
+       </table> -->
   </div>
 

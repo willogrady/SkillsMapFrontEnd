@@ -1,0 +1,60 @@
+<div class="container">
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+</head>
+<body>
+<div class="signup-form">
+    <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+		<div class="col-xs-8 col-xs-offset-4">
+			<h2>Create Role</h2>
+		</div>		
+        <div class="form-group">
+			<label class="control-label col-xs-4">Role Title</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="roletitle" required="required" #role_title>
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Grade Required</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="grade" required="required" #role_grade>
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Role Summary</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="summary" required="required" #role_summary> 
+            </div>        	
+        </div>
+		<div class="form-group">
+			<label class="control-label col-xs-4">Role Group</label>
+			<div class="col-xs-8">
+                <input type="text" class="form-control" name="rolegroup" required="required" #role_group_id>
+            </div>        	
+        </div>
+		<div class="form-group">
+			<div class="col-xs-8 col-xs-offset-4">
+			
+				<button type="submit" class="btn btn-primary btn-lg" (click) ="createRole(role_title.value, role_grade.value,
+        role_summary.value, role_group_id.value)"> 
+          
+          Create Role</button>
+			</div>  
+		</div>		      
+    </form>
+
+</div>
+</body>
+</html>                            
+
+</div>
