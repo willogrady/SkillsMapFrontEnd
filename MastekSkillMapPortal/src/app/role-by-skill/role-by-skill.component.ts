@@ -19,7 +19,7 @@ export class RoleBySkillComponent implements OnInit {
 
   ngOnInit() {
     const role_id = this.route.snapshot.paramMap.get('role_id');
-    this.skill_role_map_Service.getSkillsViaRole(role_id)
+    this.skill_role_map_Service.getRoleSkillMapViaRole(role_id)
       .subscribe(response => {
         this.roleSkillMaps = response;
         console.log(response)

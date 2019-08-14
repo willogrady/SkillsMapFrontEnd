@@ -20,9 +20,9 @@ export class SkillrolemapService {
     "/skillcode?skillcode=" + skillcode);
   }
   
-  getSkillsViaRole(role_id: string): Observable<RoleSkillMap[]> {
+  getRoleSkillMapViaRole(role_id: string): Observable<RoleSkillMap[]> {
     return this.httpsvc.get<RoleSkillMap[]>(this.rootURL +
-      "/skill_by_role?role_id=" + role_id);  
+      "/role_id?role_id=" + role_id);  
   }
   
 }
