@@ -15,7 +15,7 @@ export class SfiaService {
   category1: string;
 
   constructor(private httpsvc: HttpClient) {
-  this.rootURL = 'https://svcsfiaskill.azurewebsites.net/sfia';
+  this.rootURL = 'https://svcsfiaskill.azurewebsites.net/sfia'; 
   this.category1 = "Strategy and architecture";
   this.category = ["Strategy and architecture", "Change and transformation", 
   "Development and implementation", "Delivery and operation", "Skills and quality",
