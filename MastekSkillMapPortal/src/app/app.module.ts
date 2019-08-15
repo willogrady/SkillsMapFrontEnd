@@ -36,7 +36,8 @@ import { CreateRoleComponent } from './create-role/create-role.component';
       navigateToLoginRequestUrl: false,
       authority: 'https://login.microsoftonline.com/common/oauth2/authorize',
       endpoints: {
-        "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
+        // "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
+        "https://skillsmapportal.azurewebsites.net": "xxx-bae6-4760-b434-xxx"
       },
       cacheLocation: 'localStorage'
       }),
