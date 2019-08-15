@@ -1,4 +1,8 @@
 
 <div class="container">
-<h6>Welcome {{userSvc.LoggedInUserEmail}}</h6>
+<h6>Welcome {{userSvc.LoggedInUserName}}</h6>
+<p>Email: {{userSvc.LoggedInUserEmail}}</p>
+
+<button class="btn btn-primary" (click)="userLogout()">Logout</button>
+
 </div>
