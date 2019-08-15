@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'role-skill-map/:skillcode', component: SkillrolemapComponent},
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
-  { path: 'role', component: RoleComponent},
+  { path: 'role', component: RoleComponent, pathMatch: 'full', canActivate: [AuthenticationGuard]},
   { path: 'role-by-skill', component: RoleBySkillComponent },
   { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
   { path: 'create-role', component: CreateRoleComponent}

@@ -13,10 +13,19 @@ export class HomeComponent implements OnInit {
     this.user = [];
   }
 
-  ngOnInit() {
-    console.log("hey " + this.userSvc.LoggedInUserEmail);
+  userLogout() {
+    this.userSvc.logout();
+  }
 
-    
+
+  
+
+ ngOnInit() {
+    console.log("hey " + this.userSvc.LoggedInUserEmail);
+    console.log("hey user info" + this.userSvc.userInfo.profile)
+    console.log("hey user info" + this.userSvc.LoggedInUserName)
+
+
 
 
 
