@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MsAdalAngular6Service } from 'microsoft-adal-angular6';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  user: MsAdalAngular6Service[];
 
-  constructor() { }
+  constructor(private userSvc: MsAdalAngular6Service) { 
+    this.user = [];
+  }
 
   ngOnInit() {
+    console.log("hey " + this.userSvc.LoggedInUserEmail);
+
+    
+
+
+
+
   }
 
 }

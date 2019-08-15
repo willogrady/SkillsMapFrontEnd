@@ -8,10 +8,14 @@ import { RoleComponent } from './role/role.component';
 import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
+import { AppComponent } from './app.component';
+import { AuthenticationGuard } from 'microsoft-adal-angular6';
+
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent, pathMatch: 'full', canActivate: [AuthenticationGuard] },
+  //{ path: 'home', component: HomeComponent},
   { path: 'sfia', component: SfiaComponent},
   { path: 'role-skill-map/:skillcode', component: SkillrolemapComponent},
   { path: 'sfia-categories', component: SfiaCategoryComponent},

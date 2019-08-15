@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {NgxPaginationModule} from 'ngx-pagination';  
 import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 import {FormsModule} from "@angular/forms"; 
-
+import { MsAdalAngular6Module, AuthenticationGuard } from 'microsoft-adal-angular6';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SfiaComponent } from './sfia/sfia.component';
@@ -29,6 +29,18 @@ import { CreateRoleComponent } from './create-role/create-role.component';
     CreateRoleComponent
   ],
   imports: [
+    MsAdalAngular6Module.forRoot({
+      tenant: 'add1c500-a6d7-4dbd-b890-7f8cb6f7d861',
+      clientId: '2045569c-793f-489b-857b-03267d6dc112',
+      redirectUri: window.location.origin,
+      navigateToLoginRequestUrl: false,
+      authority: 'https://login.microsoftonline.com/common/oauth2/authorize',
+      endpoints: {
+        "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
+      },
+      cacheLocation: 'localStorage'
+      }),
+  
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -36,7 +48,9 @@ import { CreateRoleComponent } from './create-role/create-role.component';
     Ng2SearchPipeModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    AuthenticationGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
