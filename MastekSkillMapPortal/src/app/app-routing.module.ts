@@ -10,6 +10,7 @@ import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { AppComponent } from './app.component';
 import { AuthenticationGuard } from 'microsoft-adal-angular6';
+import { CompetenciesComponent } from './competencies/competencies.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'role', component: RoleComponent, pathMatch: 'full', canActivate: [AuthenticationGuard]},
   { path: 'role-by-skill', component: RoleBySkillComponent },
   { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
-  { path: 'create-role', component: CreateRoleComponent}
+  { path: 'create-role', component: CreateRoleComponent},
+  { path: 'competencies',component:CompetenciesComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,43 @@
+<div class="container">
+    <h6>Mastek Competency Skills</h6>
+    <table class="table">
+        <tr>
+            <th>
+                Category
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Level 1
+            </th>
+            <th>
+                Level 2
+            </th>
+
+            <th>
+                Level 3
+            </th>
+            <th>
+                Level 4
+            </th>
+            <th>
+                Level 5
+            </th>
+            <th>
+                Level 6
+            </th>
+        </tr>
+        <tr *ngFor="let c of competencies">
+            <td>{{c.competency_category}}</td>
+            <td>{{c.competency_description}}</td>
+            <td>{{c.level1}}</td>
+            <td>{{c.level2}}</td>
+            <td>{{c.level3}}</td>
+            <td>{{c.level4}}</td>
+            <td>{{c.level5}}</td>
+            <td>{{c.level6}}</td>
+            
+        </tr>
+    </table>
+    </div>
