@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RoleService } from '../role.service';
 import { Role } from '../role';
+import { RoleGroup } from '../role-group';
 
 @Component({
   selector: 'app-create-role',
@@ -23,6 +24,16 @@ export class CreateRoleComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.roleService.getRoles().subscribe(
+      res =>{this.role = res;}
+    );
+
+    // this.roleService.getRoleGroup().subscribe(
+    //   res => {this.role_group = res;}
+    // );
+    
+    console.log(this.role);
+
   }
 
 }
