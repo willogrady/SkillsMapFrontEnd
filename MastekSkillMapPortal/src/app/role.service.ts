@@ -10,9 +10,11 @@ import { Observable, Scheduler } from 'rxjs';
 export class RoleService {
 
   rootURL: string;
+  groupURL: string;
 
   constructor(private httpsvc: HttpClient) {
     this.rootURL = 'http://localhost:9901/role';
+    this.groupURL = "http://localhost:9901/role_group"
    }
 
 
@@ -35,6 +37,10 @@ export class RoleService {
 
     return this.httpsvc.post<Role[]>(this.rootURL + '/create',  reqBody.toString(), httpOpts);
     
+  }
+
+  getRoleGroup(): Observable<RoleGroup[]>{
+    return this.httpsvc.get<RoleGroup[]>(this.groupURL + '/list')
   }
 
   getRoles(): Observable<Role[]> {
