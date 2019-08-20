@@ -13,8 +13,7 @@ export class RoleService {
   groupURL: string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = 'http://localhost:9901/role';
-    this.groupURL = "http://localhost:9901/role_group"
+    this.rootURL = 'https://svccompanyroles.azurewebsites.net/role';
    }
 
 
