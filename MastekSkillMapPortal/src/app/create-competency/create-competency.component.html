@@ -1,0 +1,88 @@
+<div class="container">
+
+        <!DOCTYPE html>
+      <html lang="en">
+      <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+      
+      </head>
+      <body>
+      <div class="signup-form">
+          <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+              <div class="col-xs-8 col-xs-offset-4">
+                  <h2>Create Competency</h2>
+              </div>		
+              <div class="form-group">
+                  <label class="control-label col-xs-4">Competency Category</label>
+                  <div class="col-xs-8">
+                      <input type="text" class="form-control" name="competencycategory" required="required" #competency_category>
+                  </div>        	
+              </div>
+              <div class="form-group">
+                  <label class="control-label col-xs-4">Competency Description</label>
+                  <div class="col-xs-8">
+                      <input type="text" class="form-control" name="description" required="required" #competency_description>
+                  </div>        	
+              </div>
+              <div class="form-group">
+                  <label class="control-label col-xs-4">Level 1</label>
+                  <div class="col-xs-8">
+                      <input type="text" class="form-control" name="level1" required="required" #level1> 
+                  </div>        	
+              </div>
+              <div class="form-group">
+                    <label class="control-label col-xs-4">Level 2</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="level2" required="required" #level2> 
+                    </div>        	
+                </div>
+                <div class="form-group">
+                        <label class="control-label col-xs-4">Level 3</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="level3" required="required" #level3> 
+                        </div>        	
+                    </div>
+              <div class="form-group">
+                    <label class="control-label col-xs-4">Level 4</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="level4" required="required" #level4> 
+                    </div>        	
+                </div>
+                <div class="form-group">
+                        <label class="control-label col-xs-4">Level 5</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="level5" required="required" #level5> 
+                        </div>        	
+                    </div>
+                 <div class="form-group">
+                            <label class="control-label col-xs-4">Level 6</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" name="level6" required="required" #level6> 
+                            </div>        	
+                        </div>
+                        <div class="form-group">
+                                <label class="control-label col-xs-4">Version Id</label>
+                                <div class="col-xs-8">
+                                    <input type="text" class="form-control" name="version" required="required" #version_id> 
+                                </div>        	
+                            </div>
+              <div class="form-group">
+                  <div class="col-xs-8 col-xs-offset-4">
+                          
+                      <button type="submit" class="btn btn-primary btn-lg" (click) ="createCompetency(competency_category.value, competency_description.value,
+              level1.value, level2.value, level3.value, level4.value, level5.value, level6.value, version_id.value)"> 
+                
+                Create Competency</button>
+                  </div>  
+              </div>		      
+          </form>
+      </div>
+      </body>
+      </html>                            
+      </div>

@@ -10,6 +10,8 @@ import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { AppComponent } from './app.component';
 import { AuthenticationGuard } from 'microsoft-adal-angular6';
+import { CompetenciesComponent } from './competencies/competencies.component';
+import { CreateCompetencyComponent } from './create-competency/create-competency.component';
 
 
 
@@ -20,10 +22,12 @@ const routes: Routes = [
   { path: 'role-skill-map/:skillcode', component: SkillrolemapComponent},
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
-  { path: 'role', component: RoleComponent, pathMatch: 'full', canActivate: [AuthenticationGuard]},
+  { path: 'role', component: RoleComponent},
   { path: 'role-by-skill', component: RoleBySkillComponent },
   { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
-  { path: 'create-role', component: CreateRoleComponent}
+  { path: 'create-role', component: CreateRoleComponent},
+  { path: 'competencies',component:CompetenciesComponent},
+  { path: 'create-competency', component: CreateCompetencyComponent}
 ];
 
 @NgModule({
