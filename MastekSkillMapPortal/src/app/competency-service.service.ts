@@ -41,10 +41,18 @@ export class CompetencyServiceService {
     }
 
     
-   getCompetencyList() : Observable<Competency[]>{
+  getCompetencyList() : Observable<Competency[]>{
      return this.httpsvc.get<Competency[]>(this.rootURL + '/list');
    }
    
+  
+
+  getCompetency(competency_id: string): Observable<Competency> {
+    return this.httpsvc.get<Competency>(this.rootURL + '/id/' + competency_id);
+
+
+}
+
 
 
 }
