@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RoleSkillMap } from '../role-skill-map';
 import { SkillrolemapService } from '../skillrolemap.service';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-competency-role-map',
