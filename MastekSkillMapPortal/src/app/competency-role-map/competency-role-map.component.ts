@@ -17,7 +17,7 @@ export class CompetencyRoleMapComponent implements OnInit {
      }
 
   ngOnInit() {
-    const competency_id = this.route.snapshot.paramMap.get("competency_id");
+    const competency_id = this.route.snapshot.paramMap.get('competency_id');
     this.skill_role_map_Service.getRoleSkillMapviaCompetency(competency_id)
       .subscribe(response => {
         this.roleSkillMaps = response;

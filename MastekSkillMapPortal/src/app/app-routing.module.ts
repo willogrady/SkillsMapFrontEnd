@@ -23,7 +23,6 @@ const routes: Routes = [
   //{ path: 'home', component: HomeComponent},
   { path: 'sfia', component: SfiaComponent},
   { path: 'role-skill-map/:skillcode', component: SkillrolemapComponent },
-  { path: 'competency/:competency_id', component: CompetencyRoleMapComponent},
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
   { path: 'role', component: RoleComponent},
@@ -32,7 +31,8 @@ const routes: Routes = [
   { path: 'create-role', component: CreateRoleComponent},
   { path: 'competencies',component:CompetenciesComponent},
   { path: 'create-competency', component: CreateCompetencyComponent},
-  { path: 'competency-detail/:competency_id', component: CompetencyDetailComponent}
+  { path: 'competency-detail/:competency_id', component: CompetencyDetailComponent },
+  { path: 'competency-role-map/:competency_id', component: CompetencyRoleMapComponent}
 ];
 
 @NgModule({

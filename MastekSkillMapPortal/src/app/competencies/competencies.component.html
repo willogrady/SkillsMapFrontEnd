@@ -21,10 +21,14 @@
             <th>
                 Description
             </th>
+            <th>
+                
+            </th>
         </tr>
         <tr *ngFor="let c of competencies">
             <td><a [routerLink]="['/competency-detail',c.competency_id]">{{c.competency_category}}</a></td>
             <td>{{c.competency_description}}</td>
+            <td><a [routerLink]="['/competency-role-map',c.competency_id]"><i class="fa fa-search fa-1x"></i></a></td>
             
         </tr>
     </table>

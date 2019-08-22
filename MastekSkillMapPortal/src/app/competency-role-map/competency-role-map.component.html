@@ -1,7 +1,6 @@
 <div class = "container">
     <table class="table">
          <tr>
-          <th>SkillCode</th>
           <th>Role Title</th>
           <th>Skill Level Required</th>
           <th>Mastek Grade Required</th>
@@ -9,7 +8,6 @@
           <th>Summary</th>
          </tr>
            <tr *ngFor ="let role of roleSkillMaps; let i = index">
-           <td>{{role.skillcode}}</td>
            <td>{{role.role.role_title}}</td>
            <td>{{role.level}}</td>
            <td>{{role.role.role_grade}}</td>
