@@ -17,6 +17,7 @@ import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
+import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CreateCompetencyComponent } from './create-competency/create-competency
     RoleBySkillComponent,
     CreateRoleComponent,
     CompetenciesComponent,
-    CreateCompetencyComponent
+    CreateCompetencyComponent,
+    CompetencyDetailComponent
   ],
   imports: [
     MsAdalAngular6Module.forRoot({

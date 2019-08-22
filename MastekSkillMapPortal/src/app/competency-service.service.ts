@@ -45,6 +45,14 @@ export class CompetencyServiceService {
      return this.httpsvc.get<Competency[]>(this.rootURL + '/list');
    }
    
+  
+
+  getCompetency(competency_id: string): Observable<Competency> {
+    return this.httpsvc.get<Competency>(this.rootURL + '/id/' + competency_id);
+
+
+}
+
 
 
 }
