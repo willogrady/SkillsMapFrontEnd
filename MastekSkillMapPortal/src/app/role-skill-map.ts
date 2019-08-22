@@ -6,6 +6,7 @@ export interface RoleSkillMap {
     role_id: number;
     role_title: string;
     skillcode: string;
+    competency_id: number;
     level: number;
     version_id: number;
     roleGroup: Role;
