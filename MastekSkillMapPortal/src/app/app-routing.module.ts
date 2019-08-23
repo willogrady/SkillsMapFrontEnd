@@ -13,7 +13,8 @@ import { AuthenticationGuard } from 'microsoft-adal-angular6';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
 import { RoleByCompetencyComponent } from './role-by-competency/role-by-competency.component';
-import { CompetencyDetailComponent } from './competency-detail/competency-detail.component'
+import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
+import { CompetencyByRoleComponent } from './competency-by-role/competency-by-role.component';
 
 
 
@@ -32,7 +33,9 @@ const routes: Routes = [
   { path: 'competencies',component:CompetenciesComponent},
   { path: 'create-competency', component: CreateCompetencyComponent},
   { path: 'competency-detail/:competency_id', component: CompetencyDetailComponent },
-  { path: 'role-by-competency/:competency_id', component: RoleByCompetencyComponent}
+  { path: 'role-by-competency/:competency_id', component: RoleByCompetencyComponent },
+  { path: 'competency-by-role', component: CompetencyByRoleComponent },
+  { path: 'competency-by-role/:role_id', component: CompetencyByRoleComponent }
 ];
 
 @NgModule({
