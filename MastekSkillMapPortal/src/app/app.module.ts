@@ -17,7 +17,7 @@ import { SkillByRoleComponent } from './skill-by-role/skill-by-role.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
-import { CompetencyRoleMapComponent } from './competency-role-map/competency-role-map.component';
+import { RoleByCompetencyComponent } from './role-by-competency/role-by-competency.component';
 import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
 
 @NgModule({
@@ -33,7 +33,7 @@ import { CompetencyDetailComponent } from './competency-detail/competency-detail
     CreateRoleComponent,
     CompetenciesComponent,
     CreateCompetencyComponent,
-    CompetencyRoleMapComponent,
+    RoleByCompetencyComponent,
     CompetencyDetailComponent
   ],
   imports: [
