@@ -14,7 +14,6 @@ export class RoleService {
 
   constructor(private httpsvc: HttpClient) {
     this.rootURL = 'http://localhost:9901/role';
-    //this.rootURL = 'https://svccompanyroles.azurewebsites.net/role';
    }
 
 
@@ -34,9 +33,7 @@ export class RoleService {
         'application/x-www-form-urlencoded;charset=UTF-8'
         })
       }
-
     return this.httpsvc.post<Role[]>(this.rootURL + '/create',  reqBody.toString(), httpOpts);
-
   }
 
   getRoleGroup(): Observable<RoleGroup[]>{

@@ -1,0 +1,10 @@
+<table class="table">
+    <tr>
+        <th>Competency ID</th>
+        <th>Detail</th>
+    </tr>
+    <tr *ngFor ="let r of roleCompetencyMaps; let i = index">
+        <td>{{r.competency_id}}</td>
+        <td><a [routerLink]="['/competency-detail/',r.competency_id]">Detail</a></td>
+    </tr>
+</table>

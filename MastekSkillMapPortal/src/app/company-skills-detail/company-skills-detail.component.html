@@ -1,0 +1,50 @@
+<div class="container">
+
+        <h2>{{companySkills.company_skill_category}} - {{companySkills.company_skill}}</h2>
+
+        <div class = "container">
+            <h6>Skill Rank Required:  - {{companySkills.company_skill_rank}}</h6>
+        <h3>Skill Description</h3>
+            <p>{{companySkills.company_skill_description}}</p>
+        </div>
+        
+
+        <table class = "table">
+            <tr *ngIf="companySkills.level1 != NULL">
+                <td>Level 1</td>
+                <td>{{companySkills.level1}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level2 != NULL">
+                <td>Level 2</td>
+                <td>{{companySkills.level2}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level3 != NULL">
+                <td>Level 3</td>
+                <td>{{companySkills.level3}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level4 != NULL">
+                <td>Level 4</td>
+                <td>{{companySkills.level4}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level5 != NULL">
+                <td>Level 5</td>
+                <td>{{companySkills.level5}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level6 != NULL">
+                <td>Level 6</td>
+                <td>{{companySkills.level6}}</td>
+            </tr>
+
+            <tr *ngIf="companySkills.level7 != NULL">
+                <td>Level 7</td>
+                <td>{{companySkills.level7}}</td>
+            </tr>
+
+        </table>
+
+</div>

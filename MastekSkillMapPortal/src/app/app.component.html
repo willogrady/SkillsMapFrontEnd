@@ -10,7 +10,19 @@
           <div class="navbar-nav mr-auto">
             <a class="nav-item nav-link" href="sfia">Skill List</a>
             <a class="nav-item nav-link" href="role">Roles</a>
-            <a class="nav-item nav-link">Logout</a>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user fa"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">{{adalSvc.LoggedInUserName}}</a>
+                  <a class="dropdown-item" href="#">{{adalSvc.LoggedInUserEmail}}</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </div>
+              </li>
+
 
           </div>
         </div>

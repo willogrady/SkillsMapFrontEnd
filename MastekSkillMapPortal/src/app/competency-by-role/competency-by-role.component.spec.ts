@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillrolemapComponent } from './skillrolemap.component';
+import { CompetencyByRoleComponent } from './competency-by-role.component';
 
-describe('SkillrolemapComponent', () => {
-  let component: SkillrolemapComponent;
-  let fixture: ComponentFixture<SkillrolemapComponent>;
+describe('CompetencyByRoleComponent', () => {
+  let component: CompetencyByRoleComponent;
+  let fixture: ComponentFixture<CompetencyByRoleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SkillrolemapComponent ]
+      declarations: [ CompetencyByRoleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SkillrolemapComponent);
+    fixture = TestBed.createComponent(CompetencyByRoleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
