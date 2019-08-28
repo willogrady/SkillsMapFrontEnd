@@ -14,6 +14,7 @@ import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
 import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
 import { CompetencyFormComponent } from './competency-form/competency-form.component'
+import { RoleDetailComponent } from './role-detail/role-detail.component'
 
 
 
@@ -26,6 +27,9 @@ const routes: Routes = [
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
   { path: 'role', component: RoleComponent},
+  { path: 'role-detail/:id', component: RoleDetailComponent},
+  { path: 'role-by-skill', component: RoleBySkillComponent },
+  { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
   { path: 'skill-by-role', component: SkillByRoleComponent },
   { path: 'skill-by-role/:role_id', component: SkillByRoleComponent },
   { path: 'create-role', component: CreateRoleComponent},

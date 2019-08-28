@@ -12,18 +12,18 @@ export class SfiaComponent implements OnInit {
   SfiaSkills: SfiaSkill[];
 
 
-  constructor(private sfiaService:SfiaService) { 
+  constructor(private sfiaService: SfiaService) {
     this.SfiaSkills = [];
 
   }
 
 
   ngOnInit() {
-    
+
     this.sfiaService.getSkills().subscribe(
       res => {this.SfiaSkills = res; }
       );
-      console.log(this.SfiaSkills);
+    console.log(this.SfiaSkills);
   }
 
 }
