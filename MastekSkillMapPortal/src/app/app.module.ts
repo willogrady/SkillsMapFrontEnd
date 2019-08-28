@@ -11,8 +11,8 @@ import { HttpClientModule,  HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
 import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
-import { SkillrolemapComponent } from './skillrolemap/skillrolemap.component';
 import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
+import { SkillByRoleComponent } from './skill-by-role/skill-by-role.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
@@ -29,8 +29,8 @@ import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
     SfiaDetailComponent,
     SfiaCategoryComponent,
     RoleComponent,
-    SkillrolemapComponent,
     RoleBySkillComponent,
+    SkillByRoleComponent,
     CreateRoleComponent,
     CompetenciesComponent,
     CreateCompetencyComponent,
@@ -38,7 +38,7 @@ import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
     CompanySkillsDetailComponent
   ],
   imports: [
-    MsAdalAngular6Module.forRoot({
+      MsAdalAngular6Module.forRoot({
       tenant: 'add1c500-a6d7-4dbd-b890-7f8cb6f7d861',
       clientId: '2045569c-793f-489b-857b-03267d6dc112',
       redirectUri: window.location.origin,
