@@ -34,7 +34,7 @@
                             </th>
                         </tr>
                         <tr *ngFor="let r of roles; let i = index">
-                            <td>{{r.role_title}}</td>
+                            <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                             <td>{{r.role_grade}}</td>
                             <td>{{r.role_summary}}</td>
                             <td><a [routerLink]="['/role-by-skill',r.role_id]"><i class="fa fa-search fa-1x"></i></a></td>
@@ -70,7 +70,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                    <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>
@@ -105,7 +105,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>
@@ -140,7 +140,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>
@@ -175,7 +175,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>
@@ -210,7 +210,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>
@@ -245,7 +245,7 @@
                                 </th>
                             </tr>
                             <tr *ngFor="let r of roles; let i = index">
-                                <td>{{r.role_title}}</td>
+                                <td><a [routerLink]="['/role-detail',r.role_id]">{{r.role_title}}</a></td>
                                 <td>{{r.role_grade}}</td>
                                 <td>{{r.role_summary}}</td>
                             </tr>

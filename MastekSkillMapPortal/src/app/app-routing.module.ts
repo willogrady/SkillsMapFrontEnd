@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { AuthenticationGuard } from 'microsoft-adal-angular6';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'sfia-categories', component: SfiaCategoryComponent},
   { path: 'sfia-skill/:id', component: SfiaDetailComponent},
   { path: 'role', component: RoleComponent},
+  { path: 'role-detail/:id', component: RoleDetailComponent},
   { path: 'role-by-skill', component: RoleBySkillComponent },
   { path: 'role-by-skill/:role_id', component: RoleBySkillComponent },
   { path: 'create-role', component: CreateRoleComponent},

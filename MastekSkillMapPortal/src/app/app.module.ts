@@ -17,6 +17,7 @@ import { RoleBySkillComponent } from './role-by-skill/role-by-skill.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
 
 @NgModule({
   declarations: [
@@ -30,18 +31,19 @@ import { CreateCompetencyComponent } from './create-competency/create-competency
     RoleBySkillComponent,
     CreateRoleComponent,
     CompetenciesComponent,
-    CreateCompetencyComponent
+    CreateCompetencyComponent,
+    RoleDetailComponent
   ],
   imports: [
     MsAdalAngular6Module.forRoot({
       tenant: 'add1c500-a6d7-4dbd-b890-7f8cb6f7d861',
-      clientId: '8d53e241-2c53-47d4-91fd-40354bd66478',
+      clientId: '2045569c-793f-489b-857b-03267d6dc112',
       redirectUri: window.location.origin,
       navigateToLoginRequestUrl: false,
       authority: 'https://login.microsoftonline.com/common/oauth2/authorize',
       endpoints: {
-        // "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
-        "https://skillsmapportal.azurewebsites.net": "xxx-bae6-4760-b434-xxx"
+         "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
+        //"https://skillsmapportal.azurewebsites.net": "xxx-bae6-4760-b434-xxx"
       },
       cacheLocation: 'localStorage'
       }),

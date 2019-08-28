@@ -1,7 +1,7 @@
 import { Role } from './role';
 import { SfiaSkill } from './sfia-skill';
 
-export interface RoleSkillMap {
+export interface RoleSkillMap extends SfiaSkill{
     role_skill_map_id: number;
     role_id: number;
     role_title: string;
@@ -10,5 +10,4 @@ export interface RoleSkillMap {
     version_id: number;
     roleGroup: Role;
     role: Role;
-    skill: SfiaSkill
 }
