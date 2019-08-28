@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 import {NgxPaginationModule} from 'ngx-pagination';  
 import { Ng2SearchPipeModule } from 'ng2-search-filter'; 
 import {FormsModule} from "@angular/forms"; 
-import { MsAdalAngular6Module, AuthenticationGuard } from 'microsoft-adal-angular6';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SfiaComponent } from './sfia/sfia.component';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,  HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SfiaDetailComponent } from './sfia-detail/sfia-detail.component';
 import { SfiaCategoryComponent } from './sfia-category/sfia-category.component';
 import { RoleComponent } from './role/role.component';
@@ -17,9 +16,10 @@ import { SkillByRoleComponent } from './skill-by-role/skill-by-role.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
-import { CompetencyRoleMapComponent } from './competency-role-map/competency-role-map.component';
 import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
 import { CompetencyFormComponent } from './competency-form/competency-form.component';
+import { MsAdalAngular6Module, AuthenticationGuard } from 'microsoft-adal-angular6'
+import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { CompetencyFormComponent } from './competency-form/competency-form.compo
     CreateRoleComponent,
     CompetenciesComponent,
     CreateCompetencyComponent,
-    CompetencyRoleMapComponent,
+
     CompetencyDetailComponent,
     CompetencyFormComponent
   ],
@@ -46,10 +46,14 @@ import { CompetencyFormComponent } from './competency-form/competency-form.compo
       navigateToLoginRequestUrl: false,
       authority: 'https://login.microsoftonline.com/common/oauth2/authorize',
       endpoints: {
-      "https://localhost/4200/": "xxx-bae6-4760-b434-xxx"
-      //"https://skillsmapportal.azurewebsites.net": "xxx-bae6-4760-b434-xxx"
+        "https://localhost/4200/": "xxx-bae6-4760-b434-xxx",
+        "https://graph.microsoft.com": "00000003-0000-0000-c000-000000000000",
+        "api": "2045569c-793f-489b-857b-03267d6dc112"
+
+        //"https://skillsmapportal.azurewebsites.net": "xxx-bae6-4760-b434-xxx"
       },
-      cacheLocation: 'localStorage'
+      cacheLocation: 'localStorage',
+      consentScopes: ["user.read"]
       }),
   
     BrowserModule,
@@ -60,7 +64,15 @@ import { CompetencyFormComponent } from './competency-form/competency-form.compo
     FormsModule
   ],
   providers: [
-    AuthenticationGuard
+    AuthenticationGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InsertAuthTokenInterceptor,
+      multi: true
+    }
+    // AdalService,
+    // AdalGuard,
+    // { provide: HTTP_INTERCEPTORS, useClass: AdalInterceptor, multi: true }],
   ],
   bootstrap: [AppComponent]
 })

@@ -3,6 +3,19 @@
 <h6>Welcome {{userSvc.LoggedInUserName}}</h6>
 <p>Email: {{userSvc.LoggedInUserEmail}}</p>
 
+<h6>Current Role: {{profile.jobTitle}}</h6>
+<h6>Current Location: {{profile.officeLocation}}t</h6>
+
+<br><br>
+
+
+
+<h4>Your Reporting Manager</h4>
+<h6>{{manager.displayName}}</h6>
+<h6>{{manager.mail}}</h6>
+
 <button class="btn btn-primary" (click)="userLogout()">Logout</button>
+
+
 
 </div>

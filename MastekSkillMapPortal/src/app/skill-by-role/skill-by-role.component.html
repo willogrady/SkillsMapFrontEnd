@@ -20,10 +20,10 @@
    <table class="table">
         <tr>
             <th>Skill Code</th>
-            <th>Skill</th>
+            <th>Detail</th>
         </tr>
         <tr *ngFor ="let r of roleSkillMaps; let i = index">
-            <td><a [routerLink]="['/sfia-skill',r.skillcode]">{{r.skillcode}}</a></td>
-            <td ></td>
+            <td>{{r.skillcode}}</td>
+            <td><a [routerLink]="['/sfia-skill',r.skillcode]">Detail</a></td>
         </tr>
     </table>
