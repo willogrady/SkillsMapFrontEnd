@@ -1,5 +1,5 @@
 export interface Competency {
-    competency_id : number;
+    competency_id : string;
     competency_category : string;
     competency_description : string;
     level1 : string;
@@ -8,5 +8,5 @@ export interface Competency {
     level4 : string;
     level5 : string;
     level6 : string;
-    version_id : number; 
+    version_id : string; 
 }

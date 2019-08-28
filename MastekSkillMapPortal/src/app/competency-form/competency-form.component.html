@@ -1,0 +1,19 @@
+<div class="container">
+
+    <form (ngSubmit)="processForm(competency_category.value, competency_id.value,
+    version_id.value)">
+        <div class="form group">
+                <label for="category">Category</label>
+            <input type="text" name="competency_category" class="form-control" [(ngModel)]="competency_category">
+        </div>
+        <div class="form group">
+            <label for="description">ID</label>
+            <input type="text" name="competency_id" class="form-control" [(ngModel)]="competency_id">
+        </div>
+        <div class="form group">
+                <label for="description">Version ID</label>
+                <input type="text" name="version_id" class="form-control" [(ngModel)]="version_id">
+            </div>
+        <input type="submit" value="save" class="btn btn-success">
+    </form>
+</div>

@@ -19,6 +19,7 @@ import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
 import { CompetencyRoleMapComponent } from './competency-role-map/competency-role-map.component';
 import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
+import { CompetencyFormComponent } from './competency-form/competency-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { CompetencyDetailComponent } from './competency-detail/competency-detail
     CompetenciesComponent,
     CreateCompetencyComponent,
     CompetencyRoleMapComponent,
-    CompetencyDetailComponent
+    CompetencyDetailComponent,
+    CompetencyFormComponent
   ],
   imports: [
       MsAdalAngular6Module.forRoot({
