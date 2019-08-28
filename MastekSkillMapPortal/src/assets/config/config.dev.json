@@ -1,0 +1,12 @@
+{
+    "adalConfig": {
+        "clientId": "2045569c-793f-489b-857b-03267d6dc112",
+        "tenant": "add1c500-a6d7-4dbd-b890-7f8cb6f7d861",
+        "cacheLocation": "localStorage",
+        "authority": "https://login.microsoftonline.com/common/oauth2/authorize",
+        "endpoints": {
+            "api": "2045569c-793f-489b-857b-03267d6dc112"
+        }
+    }
+}
+

@@ -33,9 +33,7 @@ export class RoleService {
         'application/x-www-form-urlencoded;charset=UTF-8'
         })
       }
-
     return this.httpsvc.post<Role[]>(this.rootURL + '/create',  reqBody.toString(), httpOpts);
-    
   }
 
   getRoleGroup(): Observable<RoleGroup[]>{
