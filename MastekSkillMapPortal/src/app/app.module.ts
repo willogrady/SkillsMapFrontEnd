@@ -16,6 +16,7 @@ import { SkillByRoleComponent } from './skill-by-role/skill-by-role.component';
 import { CreateRoleComponent } from './create-role/create-role.component';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
 import { CompanySkillsComponent } from './company-skills/company-skills.component';
 import { CompanySkillsDetailComponent } from './company-skills-detail/company-skills-detail.component';
 import { MsAdalAngular6Module, AuthenticationGuard } from 'microsoft-adal-angular6';
@@ -34,6 +35,7 @@ import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
     CreateRoleComponent,
     CompetenciesComponent,
     CreateCompetencyComponent,
+    RoleDetailComponent,
     CompanySkillsComponent,
     CompanySkillsDetailComponent
   ],

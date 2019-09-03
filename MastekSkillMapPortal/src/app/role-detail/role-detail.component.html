@@ -1,0 +1,51 @@
+<div class="container">
+
+    <table class="table">
+        <tr>
+        <th>Role</th>
+        <th>Description</th>
+        </tr>
+        <tr>
+            <td>{{role.role_title}}</td>
+            <td *ngIf ="role.role_description != NULL">{{role.role_description}}</td>
+            
+        </tr>
+    </table>
+    <h3>Associated Skills</h3>
+    <table class="table">
+          <tr>
+              <th>Skill Code</th>
+              <th>Level</th>
+          </tr>
+          <tr *ngFor ="let r of roleSkillMaps; let i = index">
+              <td><a [routerLink]="['/sfia-skill',r.skillcode]">{{r.skillcode}}</a></td>
+              <td>{{r.level}}</td>
+          </tr>
+    </table>
+
+
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Add a new skill to this role
+            </a>
+
+    <div class="collapse" id="collapseExample">
+        <div class="container">
+            <form>
+              <div class="form-group">
+                <label for="power">Skill</label>
+                <select class="form-control" id="skill" #skill>
+                  <option *ngFor="let s of skills" >{{s.skillcode}}</option>
+                </select>
+              </div>
+        
+              <div class="form-group">
+                <label for="alterEgo">Level</label>
+                <input type="text" class="form-control" id="skillLevel" #skillLevel>
+              </div>
+        
+              <button type="submit" class="btn btn-success" (click)="createRoleSkillMap(skill.value, skillLevel.value)">Submit</button>
+        
+            </form>
+        </div>
+      </div> 
+</div>
