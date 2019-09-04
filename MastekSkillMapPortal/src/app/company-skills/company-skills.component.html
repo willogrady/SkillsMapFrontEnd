@@ -28,6 +28,7 @@
             <th>
                 Skill
             </th>
+            
             <th>
                 Category
             </th>
@@ -37,12 +38,75 @@
             <th>
                 Description
             </th>
+            <th>
+                
+            </th>
         </tr>
         <tr *ngFor="let c of companySkills | filter:filter; let i = index">
             <td><a [routerLink]="['/company-skills',c.company_skill_id]">{{c.company_skill}}</a></td>
             <td>{{c.company_skill_category}}</td>
             <td>{{c.company_skill_sub_category}}</td>
             <td>{{c.company_skill_description}}</td>
+            <td><i class="fa fa-edit"></i></td>
         </tr>
     </table>
 </div>
+
+<div class="container">
+
+  <div class="signup-form">
+      <form action="/examples/actions/confirmation.php" method="post" class="form-horizontal">
+          <div class="col-xs-8 col-xs-offset-4">
+              <h2>Testing Edit Functionality</h2>
+          </div>		
+          <div class="form-group">
+              <label class="control-label col-xs-4">Company Skill ID</label>
+              <div class="col-xs-8">
+                  <input type="text" class="form-control" name="company_skill_id" required="required" #company_skill_id>
+              </div>        	
+          </div>
+          <div class="form-group">
+              <label class="control-label col-xs-4">Company Skill</label>
+              <div class="col-xs-8">
+                  <input type="text" class="form-control" name="companyskill" required="required" #company_skill>
+              </div>        	
+          </div>
+          <div class="form-group">
+              <label class="control-label col-xs-4">Company Skill Category</label>
+              <div class="col-xs-8">
+                  <input type="text" class="form-control" name="category" required="required" #company_skill_category> 
+              </div>        	
+          </div>
+        
+        <div class="form-group">
+            <label class="control-label col-xs-4">Company Skill Sub Category</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="subcategory" required="required" #company_skill_sub_category> 
+            </div>        	
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Company Skill Description</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="description" required="required" #company_skill_description> 
+            </div>        	
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-4">Version Id</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" name="versionid" required="required" #version_id> 
+            </div>        	
+        </div>
+          <div class="form-group">
+              <div class="col-xs-8 col-xs-offset-4">
+                      
+                  <button type="submit" class="btn btn-primary btn-lg" (click) ="updateSkills(company_skill_id.value, company_skill.value,
+          company_skill_category.value, company_skill_sub_category.value, company_skill_description.value, version_id.value)"> 
+            
+            Edit Skill</button>
+              </div>  
+          </div>		      
+      </form>
+  </div>
+                         
+  </div>
+
