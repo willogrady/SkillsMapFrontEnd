@@ -20,6 +20,8 @@ import { CompetencyDetailComponent } from './competency-detail/competency-detail
 import { CompetencyFormComponent } from './competency-form/competency-form.component';
 import { MsAdalAngular6Module, AuthenticationGuard } from 'microsoft-adal-angular6'
 import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
+import { RoleDetailComponent } from './role-detail/role-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,7 @@ import { InsertAuthTokenInterceptor } from './insert-auth-token-interceptor';
     CreateRoleComponent,
     CompetenciesComponent,
     CreateCompetencyComponent,
-
+    RoleDetailComponent,
     CompetencyDetailComponent,
     CompetencyFormComponent
   ],
