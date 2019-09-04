@@ -12,7 +12,7 @@ export class CompetencyServiceService {
   private competency:Competency;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = 'http://localhost:9902/competency'
+    this.rootURL = 'https://svcCompetencies.azurewebsites.net/competency'
 
    }
   createRole(competency_category: string, competency_description: string,
