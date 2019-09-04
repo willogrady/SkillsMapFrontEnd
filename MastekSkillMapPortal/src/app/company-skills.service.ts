@@ -10,7 +10,7 @@ export class CompanySkillsService {
   rootURL: string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = "http://localhost:9903/company_skills"
+    this.rootURL = "https://svccompanyskill.azurewebsites.net/company_skills"
    }
 
    getCompanySkills(): Observable<Companyskills[]> {

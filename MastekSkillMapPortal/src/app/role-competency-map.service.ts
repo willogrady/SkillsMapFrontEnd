@@ -11,7 +11,7 @@ export class RoleCompetencyMapService {
   rootURL: string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = "http://localhost:9901/role_competency_skill_map";
+    this.rootURL = "https://svccompanyroles.azurewebsites.net/role_competency_skill_map";
   }
   
   getRoleSkillMapviaCompetency(competency_id: string): Observable<RoleCompetencyMap[]> {
