@@ -11,7 +11,7 @@ export class SkillrolemapService {
   rootURL: string;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = "http://localhost:9901/role_skill_map";
+    this.rootURL = "https://svccompanyroles.azurewebsites.net/role_skill_map";
    }
   
   getRoleSkillMapviaSkillCode(skillcode: string): Observable<RoleSkillMap[]> {

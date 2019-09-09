@@ -9,9 +9,10 @@ import { HttpXsrfTokenExtractor } from '@angular/common/http';
 })
 export class CompetencyServiceService {
   rootURL : string;
+  private competency:Competency;
 
   constructor(private httpsvc: HttpClient) {
-    this.rootURL = 'http://localhost:9902/competency'
+    this.rootURL = 'https://svcCompetencies.azurewebsites.net/competency'
 
    }
   createRole(competency_category: string, competency_description: string,
@@ -28,7 +29,6 @@ export class CompetencyServiceService {
     reqBody.set('level5', level5)
     reqBody.set('level6', level6),
     reqBody.set('version_id', version_id)
-    
 
     const httpOpts = {
       headers: new HttpHeaders(
@@ -53,6 +53,33 @@ export class CompetencyServiceService {
 
 }
 
+updateCompetency(competency_category: string, competency_id: string, version_id:string): Observable<Competency>{
 
+  let reqBody = new URLSearchParams();
+  
+  reqBody.set('competency_category', competency_category)
+  reqBody.set('competency_id', competency_id)
+  reqBody.set('version_id', version_id)
+
+  
+    
+    const httpOpts = {
+      headers: new HttpHeaders(
+        {'Content-Type':
+        'application/x-www-form-urlencoded;charset=UTF-8'
+        })
+      }
+
+  return this.httpsvc.put<Competency>(this.rootURL + '/edit/category/',reqBody.toString(), httpOpts);
+}
+
+
+setter(competency:Competency){
+  this.competency = competency;
+}
+
+getter(){
+  return this.competency;
+}
 
 }

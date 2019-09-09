@@ -12,9 +12,10 @@ import { AppComponent } from './app.component';
 import { AuthenticationGuard } from 'microsoft-adal-angular6';
 import { CompetenciesComponent } from './competencies/competencies.component';
 import { CreateCompetencyComponent } from './create-competency/create-competency.component';
-import { RoleDetailComponent } from './role-detail/role-detail.component';
-import { CompanySkillsComponent } from './company-skills/company-skills.component';
-import { CompanySkillsDetailComponent } from './company-skills-detail/company-skills-detail.component';
+import { CompetencyDetailComponent } from './competency-detail/competency-detail.component';
+import { CompetencyFormComponent } from './competency-form/competency-form.component'
+import { RoleDetailComponent } from './role-detail/role-detail.component'
+
 
 
 
@@ -34,8 +35,9 @@ const routes: Routes = [
   { path: 'create-role', component: CreateRoleComponent},
   { path: 'competencies',component:CompetenciesComponent},
   { path: 'create-competency', component: CreateCompetencyComponent},
-  { path: 'company-skills', component: CompanySkillsComponent},
-  { path: 'company-skills/:id', component: CompanySkillsDetailComponent}
+  { path: 'competency-detail/:competency_id', component: CompetencyDetailComponent },
+  { path: 'update-competency', component: CompetencyFormComponent}
+
 ];
 
 @NgModule({
