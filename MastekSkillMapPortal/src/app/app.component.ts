@@ -12,9 +12,9 @@ export class AppComponent {
   user: MsAdalAngular6Service[];
 
   constructor(private adalSvc: MsAdalAngular6Service, private http: HttpClient) {
-    console.log(this.adalSvc.userInfo);
+    //console.log(this.adalSvc.userInfo);
     var token = this.adalSvc.acquireToken('https://graph.microsoft.com').subscribe((token: string) => {
-    console.log("Access token " + token);
+   // console.log("Access token " + token);
   });
   
   }
