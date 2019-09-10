@@ -1,5 +1,5 @@
 <!--Global Nav bar-->
-<header class="site-header">
+<!-- <header class="site-header">
     <nav class="navbar navbar-expand-md">
       <div class="container">
         <a class="navbar-brand mr-4" href="/"><img src="../assets/masteklogo.png"></a>
@@ -8,8 +8,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarToggle">
           <div class="navbar-nav mr-auto">
-            <a class="nav-item nav-link" href="sfia">Skill List</a>
+            
+            <a class="nav-item nav-link" href="sfia">Skill Framework</a>
+            <a class="nav-item nav-link" href="role">My Role</a>
             <a class="nav-item nav-link" href="role">Roles</a>
+            <a class="nav-item nav-link" href="role">My Role</a>
+
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -28,5 +32,32 @@
         </div>
       </div>
     </nav>
-  </header>
+  </header> -->
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your Role | Skills Framework | Mastek</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p id="welcome">Welcome <strong>{{adalSvc.LoggedInUserName}}</strong></p>
+        <ul>
+          <li><a href="framework-roles.html" routerLink="/sfia"><span class="mobile-hidden">Skills </span>Framework</a></li>
+          <li><a class="current-selection" routerLink="/">My Role</a></li>
+          <li><a routerLink="/role">Roles</a></li>
+          <li><a routerLink="/competencies">Competencies</a></li>
+          <li><a href="no-page.html">Admin</a></li>
+          <li><a (click)="userLogout()">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+
+  </html>
+  
 <router-outlet></router-outlet>

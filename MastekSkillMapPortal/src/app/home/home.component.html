@@ -1,21 +1,174 @@
 
-<div class="container">
-<h6>Welcome {{userSvc.LoggedInUserName}}</h6>
-<p>Email: {{userSvc.LoggedInUserEmail}}</p>
-
-<h6>Current Role: {{profile.jobTitle}}</h6>
-<h6>Current Location: {{profile.officeLocation}}t</h6>
-
-<br><br>
-
-
-
-<h4>Your Reporting Manager</h4>
-<h6>{{manager.displayName}}</h6>
-<h6>{{manager.mail}}</h6>
-
-<button class="btn btn-primary" (click)="userLogout()">Logout</button>
-
-
-
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Your Role | Skills Framework | Mastek</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
+  </head>
+  <body>
+    <main>
+        <span class="sub-heading">Name | {{userSvc.LoggedInUserName}}</span>
+      <h1>My Role | {{profile.jobTitle}}
+        <br>
+        <small>Reporting Manager | {{manager.displayName}}</small>
+      
+      </h1>
+     
+      <div class="split-half">
+        <h2>Role Description</h2>
+        <p>Responsible for requirement elicitation and translating business requirements to system requirements.</p>
+      </div>
+      <div class="split-half last">
+        <h2>Your Career</h2>
+        <ul>
+          <li>4 of 5 skills endorsed - <a href="#endorse">Endorse 1 skill</a></li>
+          <li><a href="#career">6 vacancies available</a> that suit your skills</li>
+          <li>View your potential <a href="#career">career paths</a></li>
+        </ul>  
+      </div>
+      <div class="split-reset"></div>
+      <h2>Technical Skills Placeholder</h2>
+      <p>Skills required that are specific to the role described</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Skill Description</th>
+              <th class="center">Level</th>
+              <th>Level Requirements</th>
+              <th class="center last">Endorsed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business analysis</td>
+              <td>The methodical investigation, analysis, review and documentation of all or part of a business in terms of business goals, objectives, functions and processes, the information used and the data on which the information is based. The definition of requirements for improving processes and systems, reducing their costs, enhancing their sustainability, and the quantification of potential business benefits. The collaborative creation and iteration of viable specifications and acceptance criteria in preparation for the deployment of information and communication systems. The adoption and adaptation of business analysis approaches based on the context of the work and selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.</td>
+              <td class="center">Level 4</td>
+              <td>Investigates operational requirements, problems, and opportunities, seeking effective business solutions through improvements in automated and non-automated components of new or changed processes. Assists in the analysis of stakeholder objectives, and the underlying issues arising from investigations into business requirements and problems, and identifies options for consideration. Works with stakeholders, to identify potential benefits and available options for consideration, and in defining acceptance tests. Contributes to selection of the business analysis methods, tools and techniques for projects; selecting appropriately from predictive (plan-driven) approaches or adaptive (iterative/agile) approaches.</td>
+              <td class="center last"><a href="no-page.html"><img class="endorsed" src="images/endorsed.svg" alt="Endorsed"><br />View</a></td>
+            </tr>
+            <tr>
+              <td>Business modelling</td>
+              <td>The production of abstract or distilled representations of real world, business or gaming situations in traditional or trans-media applications, to aid the communication and understanding of existing, conceptual or proposed scenarios. Predominantly focused around the representation of processes, roles, data, organisation and time. Models may be used to represent a subject at varying levels of detail and decomposition.</td>
+              <td class="center">Level 3</td>
+              <td>Conversant with techniques covering full range of modelling situations. Models current and desired scenarios as directed. Selects appropriate modelling techniques for meeting assigned objectives. Gains agreement from subject matter experts to models produced. Reviews resulting models with stakeholders and gains resolution to resultant issues.</td>
+              <td class="center last"><a class="page-link-anchor" name="endorse"></a><a href="no-page.html">Endorse</a></td>
+            </tr>
+    
+          </tbody>
+        </table>
+      </div>
+      <h2>Mastek Competencies</h2>
+      <p>Competencies required of everyone in a position at the level described</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Skill</th>
+              <th>Skill Description</th>
+              <th class="center">Level</th>
+              <th>Level Requirements</th>
+              <th class="center last">Endorsed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Strategic Thinker</td>
+              <td>Provides clear and defined objectives aligned to the organisation vision</td>
+              <td class="center">Level 4</td>
+              <td>1. Helps others develop an understanding of the strategic landscape<br />
+                2. Takes measures to keep abreast of client‘s strategic orientation<br />
+                3. Is able to clearly articulate long-term needs to team</td>
+              <td class="center last"><a href="no-page.html"><img class="endorsed" src="images/endorsed.svg" alt="Endorsed"><br />View</a></td>
+            </tr>
+            <tr>
+              <td>People Developer</td>
+              <td>Empowers and develops people</td>
+              <td class="center">Level 3</td>
+              <td>1. Helps individuals deliberate over issues for themselves<br />
+                2. Encourages positive and constructive feedback on performance<br />
+                3. Works with individuals to help them plan their career</td>
+              <td class="center last"><a href="no-page.html"><img class="endorsed" src="images/endorsed.svg" alt="Endorsed"><br />View</a></td>
+            </tr>
+            <tr>
+              <td>Customer Advocate</td>
+              <td>Builds credibility through repetitive high performance thus creates a reputation for self &amp; Mastek </td>
+              <td class="center">Level 3</td>
+              <td>1. Is able to educate his/her team to exhibit customer advocacy<br />
+                2. Knows the client organization and understands how decisions are made<br />
+                3. Acts as a trusted advisor, becomes involved in customers‘ decision-making process</td>
+              <td class="center last"><a href="no-page.html"><img class="endorsed" src="images/endorsed.svg" alt="Endorsed"><br />View</a></td>
+            </tr>
+            <tr>
+              <td>Influences Others</td>
+              <td>Is passionate and inspires a broad followership</td>
+              <td class="center">Level 4</td>
+              <td>1. Extends networks and uses indirect influence on stakeholders<br />
+                2. Turns around difficult situations by managing conversations and relationships thru Win-Win negotiation<br />
+                3. Is open to new ideas and thoughts and motivates others in their attempts to influence.</td>
+              <td class="center last"><a href="no-page.html"><img class="endorsed" src="images/endorsed.svg" alt="Endorsed"><br />View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a class="page-link-anchor" name="career"></a>
+      <h2>Career Paths</h2>
+      <p>Mastek job roles that are most aligned to the skills you have</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Role Description</th>
+              <th class="center">Skills Match</th>
+              <th class="center">Current Vacancies</th>
+              <th class="center last"><span class="no-wrap">Roles filled</span> <span class="no-wrap">last year</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="role.html">Senior Business Analyst</a></td>
+              <td>To provide complete view of business model for the specific engagement and facilitate analyst/solution / technical architects to deliver a solution that enables customer to meet business goals for the project.</td>
+              <td class="center">85%</td>
+              <td class="center"><a href="no-page.html">2</a></td>
+              <td class="center last">+5</td>
+            </tr>
+            <tr>
+              <td><a href="role.html">Associate Business Consultant</a></td>
+              <td>To understand complex business requirements across the program and lead multiple projects to enable customer to meet their business processes/goals for an end to end program.</td>
+              <td class="center">70%</td>
+              <td class="center">0</td>
+              <td class="center last">+1</td>
+            </tr>
+            <tr>
+              <td><a href="role.html">Suitable diagonal or horizontal role</a></td>
+              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pharetra ullamcorper nunc vitae porta. Phasellus scelerisque neque vel enim laoreet, dignissim sollicitudin augue mattis.</td>
+              <td class="center">65%</td>
+              <td class="center"><a href="no-page.html">4</a></td>
+              <td class="center last">+8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+   function autorun()
+   {
+     
+   }
+   if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+   else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+   else window.onload = autorun;
+  </script>
+  </body>
+</html>

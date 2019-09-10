@@ -1,1 +1,512 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global CSS */
+/**  Mobile **/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  table > p, table > li {
+    max-width: 80vw;
+  }
+  body, nav.content-toggle h2, input, textarea, h4, p, li {
+    font: 14px 'Open Sans', sans-serif;
+    color: #333;
+    -webkit-text-size-adjust: none;
+  }
+  header {
+    border-bottom: 2px solid #001689;
+    padding-bottom: 5px;
+  }
+  #logo {
+      display: block;
+      width: 150px;
+      text-align: center;
+      margin: 25px auto 15px;
+  }
+  header nav {
+      display: block;
+      line-height: 26px;
+      margin: 15px auto 15px;
+      text-align: center;
+  }
+  header nav p#welcome {
+    display: none;
+  }
+  header nav ul {
+    display: inline;
+  }
+  header nav ul li {
+    display: inline;
+    margin-left: 10px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile-only {
+    font-size: 21px;
+    display: inline;
+  }
+  header nav img.burger {
+    margin-left: 5px;
+  }
+  main {
+    margin: 0 22px;
+    padding: 30px 0 50px;
+    border-top: 10px solid #ddd;
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+    color: #001689;
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 21px;
+    margin: 40px 0 15px;
+  }
+  h3 {
+    font-size: 16px;
+    margin: 20px 0 10px;
+  }
+  h4 {
+    margin: 20px 0 10px;
+  }
+  p {
+    margin: 20px 0;
+  }
+  .sub-heading {
+    display: block;
+    color: #858688;
+    font-size: 14px;
+  }
+  a {
+    color: #001689;
+    text-decoration: none;
+  }
+  a:hover, a:active, a:focus {
+    text-decoration: underline;
+  }
+  nav.content-toggle {
+    margin: 30px 0;
+  }
+  nav.content-toggle h2, nav.content-toggle p  {
+    display: inline;
+  }
+  nav.content-toggle h2  {
+    margin-right: 5px;
+  }
+  nav a:hover, nav a:active, nav a:focus, .current-selection {
+    padding-bottom: 5px;
+    border-bottom: 3px solid #888;
+    text-decoration: none;
+  }
+  nav a.current-selection {
+    border-color: #001689;
+  }
+  main ul, main ol {
+    margin-top: -0.5em;
+  }
+  main li {
+    line-height: 32px;
+    padding-left: 25px;
+    padding-right: 5px;
+    list-style:  none;
+  }
+  main li::before {
+      content: "— ";
+      margin-left: -25px;
+      padding-right: 5px;
+  }
+  main ol.breadcrumb {
+    margin: -10px 0 20px 0;
+  }
+  main ol.breadcrumb li {
+    display: inline;
+    line-height: 32px;
+    padding-left: 0;
+    padding-right: 0;
+    list-style:  none;
+  }
+  main  ol.breadcrumb li::before {
+      content: "";
+      margin-left: 0;
+      padding-right: 0;
+  }
+  main  ol.breadcrumb li.arrow::before {
+      content: ">";
+      margin-left: 10px;
+      padding-right: 10px;
+  }
+  p.appended-action {
+    margin: 10px 0 20px;
+  }
+  table {
+    border-collapse: collapse;
+    border: none;
+    text-align: left;
+    margin: 0 0 50px;
+    width: 100%;
+  }
+  tr.divider {
+    border-top: 2px solid #858688;
+  }
+  th, td {
+    padding: 15px 10px 15px 0;
+    border-bottom: 1px solid #858688;
+    max-width: 700px;
+  }
+  th{
+    vertical-align: bottom;
+  }
+  td {
+    vertical-align: top;
+  }
+  th.center, td.center {
+    text-align: center;
+  }
+  th.last, td.last {
+    padding-right: 0;
+  }
+  footer {
+    height: 150px;
+    background-color: #ddd;
+  }
+  .no-wrap {
+    white-space: nowrap;
+  }
+  .split-reset {
+    width: 100%;
+    clear: both;
+  }
+  .endorsed {
+    width: 100%;
+    max-width: 50px;
+  }
+  .page-link-anchor {
+      margin-top: -30px;
+      display: block;
+      float: left;
+  }
+  input[type=text], textarea {
+    display: block;
+    width: 96%;
+    margin: 10px 0 20px;
+    padding: 7px 2%;
+    line-height: 24px;
+    border: 2px solid #333;
+  }
+  textarea {
+    height: 100px;
+  }
+  .table-container {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  h3.skill-info-expander, h3.skill-info-closer {
+    font: 14px 'Open Sans', sans-serif;
+    margin: 0;
+    line-height: 18px;
+    position: relative;
+    margin-left: 30px;
+  }
+  h3.skill-info-expander i.material-icons, h3.skill-info-closer i.material-icons {
+    font-size: 36px;
+    position: absolute;
+    left: -40px;
+    top: -10px;
+  }
+  .skill-info-detail {
+    margin-top: 30px;
+    
+  }
+  .hidden-text {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+  .skill-level-container {
+    position: relative;
+  }
+  fieldset {
+    border: none;
+  }
+  .checkboxes-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .one-quarter {
+    width: 25%;
+  }
+  .skills-selector-table {
+    min-width: 800px;
+  }
+  .level-select {
+    width: 340px;
+  }
+  .checkbox-container {
+    display: inline;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 6px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #333;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #fff;
+  }
+  
+  .checkbox-container input:disabled ~ .checkmark {
+    background-color: #ddd;
+    border: 2px solid #777;
+  }
+  
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    top: 3px;
+      left: 3px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #0099A8;
+  }
+  button {
+      padding: 15px 20px;
+      margin: 20px 0 30px;
+      background: #0099A8;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /**  Tablet **/
+  @media screen and (min-width: 768px) {
+    body, nav.content-toggle h2, input, textarea, button, p, li {
+      font-size: 18px
+    }
+  table > p, table > li {
+      font-size: 14px
+    }
+    header {
+      height: 90px;
+    }
+    #logo {
+        width: 150px;
+        float: left;
+        margin: 32px 0 0 24px;
+    }
+    .mobile-hidden {
+      display: inline;
+    }
+    header nav {
+      display: block;
+      margin: 38px 24px 15px 0;
+      text-align: center;
+      float: right;
+    }
+    header nav ul li {
+      margin-left: 20px;
+    }
+    header nav p#welcome {
+      display: inline;
+    }
+    main {
+      padding: 50px 0 100px;
+    }
+    h1 {
+      font-size: 32px;
+    }
+    h2 {
+      font-size: 24px;
+      margin: 50px 0 30px;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 30px 0 15px;
+    }
+    .sub-heading {
+      font-size: 21px;
+      margin-top: 10px;
+    }
+    div.split-half {
+      width: 50%;
+      float: left;
+      box-sizing: border-box;
+      padding-right: 30px;
+    }
+    div.split-half.last {
+    padding-right: 0;
+    }
+    nav.content-toggle {
+      margin: 40px 0;
+    }
+    main li {
+      line-height: 39px;
+    }
+    main ol.breadcrumb {
+      margin: -30px 0 40px 0;
+    }
+    p.appended-action {
+      margin: 20px 0 30px;
+    }
+    table, h3.skill-info-expander, table, h3.skill-info-closer {
+      font-size: 14px;
+    }
+    table {
+      margin: 0 0 60px
+    }
+    th, td {
+      padding: 15px 20px 15px 0;
+      border-bottom: 1px solid #858688;
+    }
+    textarea {
+      height: 200px;
+    }
+    .level-select {
+      width: 348px;
+    }
+    footer {
+      height: 300px;
+      background-color: #ddd;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /**  Laptop **/
+  @media screen and (min-width: 1000px) {
+    .mobile-only {
+      display: none;
+    }
+    header {
+      height: 120px;
+    }
+    #logo {
+      width: 200px;
+      margin-left: 5%;
+      margin-top: 42px;
+    }
+    header nav {
+      margin-right: 5.5%;
+      margin-top: 56px;
+    }
+    main {
+      margin: 0 5%;
+    }
+  }
+  
+  
+  
+
+  /**  Large Desktop **/
+  @media screen and (min-width: 1900px) {
+    body, nav.content-toggle h2, input, textarea, button {
+      font-size: 24px
+    }
+    header {
+      height: 160px;
+    }
+    #logo {
+      width: 250px;
+      margin-left: 8%;
+      margin-top: 50px;
+    }
+    header nav {
+      margin-right: 8%;
+      margin-top: 70px;
+    }
+    header nav ul li {
+      margin-left: 40px;
+    }
+    main {
+      padding: 50px 0 100px;
+      margin: 0 8%;
+    }
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 36px;
+      margin: 50px 0 30px;
+    }
+    h3 {
+      font-size: 28px;
+      margin: 35px 0 20px;
+    }
+    .sub-heading {
+      font-size: 28px;
+      margin-top: 10px;
+    }
+    nav.content-toggle {
+      margin: 50px 0;
+    }
+    main li {
+      line-height: 48px;
+    }
+    table {
+      margin-bottom: 150px;
+      font-size: 18px;
+    }
+    p.appended-action {
+      margin: 30px 0 50px;
+    }
+  }
+  

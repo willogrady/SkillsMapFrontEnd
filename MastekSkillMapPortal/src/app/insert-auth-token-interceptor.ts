@@ -44,3 +44,4 @@ export class InsertAuthTokenInterceptor implements HttpInterceptor {
       );
   }
 }
+
