@@ -14,6 +14,7 @@ export class RoleService {
 
   constructor(private httpsvc: HttpClient) {
     this.rootURL = 'https://svccompanyroles.azurewebsites.net/role';
+    //this.rootURL = "http://localhost:9901/role"
    }
 
 
@@ -39,6 +40,8 @@ export class RoleService {
   getRoleGroup(): Observable<RoleGroup[]>{
     return this.httpsvc.get<RoleGroup[]>(this.groupURL + '/list')
   }
+
+  //awful practice needs changing later down the line -jg
 
   getRoles(): Observable<Role[]> {
      return this.httpsvc.get<Role[]>(this.rootURL + '/list');
