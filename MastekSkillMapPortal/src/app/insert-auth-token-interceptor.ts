@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { MsAdalAngular6Service } from 'microsoft-adal-angular6';
 import { Observable } from 'rxjs';
-import { mergeMap } from 'rxjs/operators';
+import { mergeMap } from 'rxjs/operators'; 
 
 @Injectable({
   providedIn: 'root'
